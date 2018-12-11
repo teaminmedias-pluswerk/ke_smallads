@@ -181,6 +181,7 @@ class tx_kesmallads_module1 extends t3lib_SCbase {
 				$exportcontent.='<table>';
 				$i=0;
 				while($row=$GLOBALS['TYPO3_DB']->sql_fetch_assoc($res)) {
+					$this->sanitizeRow($row);
 					$i++;
 					$exportcontent.='<tr><td colspan="2" style="border-top:1px solid black;">'.$i.'</td></tr>';
 					$exportcontent.='<tr><td valign="_top">';
@@ -197,17 +198,7 @@ class tx_kesmallads_module1 extends t3lib_SCbase {
 					if ($row['email']) $exportcontent.=$LANG->getLL('email').$row['email'];
 					$exportcontent.='</p>';
 					$exportcontent.='</td><td width="50%" valign="_top">';
-					if ($row['fe_user_uid']){
-						$userdata=t3lib_BEfunc::getRecord('fe_users',$row['fe_user_uid']);
-						$exportcontent.=$row['user'].'<br />';
-						$exportcontent.=$userdata['name'].'<br />';
-						$exportcontent.=$userdata['address'].'<br />';
-						$exportcontent.=$userdata['zip'].' ';
-						$exportcontent.=$userdata['city'].'<br />';
-						$exportcontent.=$userdata['telephone'].'<br />';
-						$exportcontent.=$userdata['email'].'<br />';
-						$exportcontent.='ID: '.$userdata['uid'].'<br />';
-					}
+                    $exportcontent .= $this->getSanitizedUserData($row['fe_user_uid']);
 					$exportcontent.=nl2br($row['comment']);
 					$exportcontent.='</td></tr>';
 				}
@@ -228,6 +219,7 @@ class tx_kesmallads_module1 extends t3lib_SCbase {
 												'');			// LIMIT value
 				// create the content
 				while($row=$GLOBALS['TYPO3_DB']->sql_fetch_assoc($res)) {
+					$this->sanitizeRow($row);
 					$exportcontent.='<p>';
 					$exportcontent.='<b>'.$row['cat'].':</b> ';
 					if (!$this->modTSconfig['skipTitle']) $exportcontent.=$row['title'].'. ';
@@ -263,6 +255,7 @@ class tx_kesmallads_module1 extends t3lib_SCbase {
 				$exportcontent.='<table>';
 				$i=0;
 				while($row=$GLOBALS['TYPO3_DB']->sql_fetch_assoc($res)) {
+					$this->sanitizeRow($row);
 					$i++;
 					$exportcontent.='<tr><td colspan="2" style="border-top:1px solid black;">'.$i.'</td></tr>';
 					$exportcontent.='<tr><td valign="_top">';
@@ -279,17 +272,7 @@ class tx_kesmallads_module1 extends t3lib_SCbase {
 					if ($row['email']) $exportcontent.=$LANG->getLL('email').$row['email'];
 					$exportcontent.='</p>';
 					$exportcontent.='</td><td width="50%" valign="_top">';
-					if ($row['fe_user_uid']){
-						$userdata=t3lib_BEfunc::getRecord('fe_users',$row['fe_user_uid']);
-						$exportcontent.=$row['user'].'<br />';
-						$exportcontent.=$userdata['name'].'<br />';
-						$exportcontent.=$userdata['address'].'<br />';
-						$exportcontent.=$userdata['zip'].' ';
-						$exportcontent.=$userdata['city'].'<br />';
-						$exportcontent.=$userdata['telephone'].'<br />';
-						$exportcontent.=$userdata['email'].'<br />';
-						$exportcontent.='ID: '.$userdata['uid'].'<br />';
-					}
+                    $exportcontent .= $this->getSanitizedUserData($row['fe_user_uid']);
 					$exportcontent.=nl2br($row['comment']);
 					$exportcontent.='</td></tr>';
 				}
@@ -323,6 +306,37 @@ class tx_kesmallads_module1 extends t3lib_SCbase {
 				$this->content.=$this->doc->section($LANG->getLL('unHideReviewed_title'),$content,0,1);
 			break;
 		}
+	}
+
+	/**
+	 * removes XSS from array $row
+	 *
+	 * @param $row array
+	 */
+	public function sanitizeRow(&$row) {
+		foreach ($row as &$element) {
+			$element = htmlspecialchars($element);
+		}
+	}
+
+    /**
+     * @param $userId integer
+	 * @return string
+     */
+	public function getSanitizedUserData($userId) {
+        if ($userId){
+            $userData = t3lib_BEfunc::getRecord('fe_users', $userId);
+            $content = htmlspecialchars($userData['name']) . '<br />'
+            	. htmlspecialchars($userData['address']) . '<br />'
+                . htmlspecialchars($userData['zip']) . ' '
+                . htmlspecialchars($userData['city']) . '<br />'
+                . htmlspecialchars($userData['telephone']) . '<br />'
+                . htmlspecialchars($userData['email']) . '<br />'
+                . 'ID: '.$userData['uid'] . '<br />';
+        } else {
+            $content = '';
+		}
+        return $content;
 	}
 }
 
