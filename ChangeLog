@@ -1,3 +1,7 @@
+
+Version 1.3.4 (2018/12)
+* feature: make user field visible (village)
+
 Version 1.3.3
 * security bugfix: sanitize output in the backend module
 

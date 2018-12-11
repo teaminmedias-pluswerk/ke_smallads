@@ -1308,7 +1308,11 @@ for (i=0; i<subCategoryList[selectedcat].length; i++) {
 									. '</span>'
 									: '')
 							.(($edit && $this->internal['currentRow']['endtime']) ? '<span'.$this->pi_classParam('endDate').'>'.$this->pi_getLL('visible_until').$this->getFieldContent('endtime').'</span>' : '')
-							.($this->conf['displaySubmitDate'] ? '<div'.$this->pi_classParam('submitDate').'>'.$this->getFieldContent('crdate').'</div>' : '')
+
+							.($this->conf['displaySubmitDate'] ? '<div'.$this->pi_classParam('submitDate') . '>' . $this->getFieldContent('crdate')
+							.' <span'.$this->pi_classParam('user') . '> ' . htmlspecialchars($this->getFieldContent('user')) . '</span>'
+							. '</div>' : '')
+
 							.'<div'.$this->pi_classParam('category').'>'.htmlspecialchars($this->getFieldContent('cat')).'</div>'
 							.'<h2'.$this->pi_classParam('title').'>'.htmlspecialchars($this->getFieldContent('title')).'</h2>'
 							.'<div'.$this->pi_classParam('content').'>'.$this->getFieldContent('content').'</div>'
