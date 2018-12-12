@@ -1,5 +1,5 @@
 <?php
-if (!defined ('TYPO3_MODE')) 	die ('Access denied.');
+defined('TYPO3_MODE') or die('Access denied.');
 
 if (!defined ('KE_SMALLADS_EXT')) {
     define('KE_SMALLADS_EXT', 'ke_smallads');
