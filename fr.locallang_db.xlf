@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" target-language="fr" datatype="plaintext" original="messages" date="2018-12-11T20:35:48Z" product-name="ke_smallads">
+		<header/>
+		<body>
+			<trans-unit id="tx_kesmallads_smallads.user" xml:space="preserve" approved="yes">
+				<source>Userselection</source>
+				<target>S�l�ction utilisateur</target>
+			</trans-unit>
+			<trans-unit id="tx_kesmallads_smallads.phone" xml:space="preserve" approved="yes">
+				<source>Phone</source>
+				<target>T�l�phone</target>
+			</trans-unit>
+			<trans-unit id="tx_kesmallads_smallads.email" xml:space="preserve" approved="yes">
+				<source>Email</source>
+				<target>Email</target>
+			</trans-unit>
+			<trans-unit id="tx_kesmallads_smallads" xml:space="preserve" approved="yes">
+				<source>Smallads</source>
+				<target>Smallads</target>
+			</trans-unit>
+			<trans-unit id="tx_kesmallads_smallads.cat" xml:space="preserve" approved="yes">
+				<source>1. Category</source>
+				<target>Cat�gorie</target>
+			</trans-unit>
+			<trans-unit id="tx_kesmallads_smallads.content" xml:space="preserve" approved="yes">
+				<source>Content</source>
+				<target>Texte</target>
+			</trans-unit>
+			<trans-unit id="tx_kesmallads_smallads.image" xml:space="preserve" approved="yes">
+				<source>Image</source>
+				<target>Image</target>
+			</trans-unit>
+			<trans-unit id="tx_kesmallads_smallads.displayemail" xml:space="preserve" approved="yes">
+				<source>Should the email address be displayed?</source>
+				<target>Afficher l'adresse email?</target>
+			</trans-unit>
+			<trans-unit id="tx_kesmallads_smallads.title" xml:space="preserve" approved="yes">
+				<source>Title</source>
+				<target>Titre</target>
+			</trans-unit>
+			<trans-unit id="tx_kesmallads_smallads.reviewed" xml:space="preserve" approved="yes">
+				<source>reviewed</source>
+				<target>Vis�</target>
+			</trans-unit>
+			<trans-unit id="tt_content.list_type_pi1" xml:space="preserve" approved="yes">
+				<source>Smallads</source>
+				<target>Smallads</target>
+			</trans-unit>
+			<trans-unit id="tx_kesmallads_smallads.fe_user_uid" xml:space="preserve" approved="yes">
+				<source>Frontend User</source>
+				<target>Frontend User</target>
+			</trans-unit>
+			<trans-unit id="tx_kesmallads_smallads.comment" xml:space="preserve" approved="yes">
+				<source>Comment</source>
+				<target>Commentaire</target>
+			</trans-unit>
+			<trans-unit id="tx_kesmallads_smallads.iscommercial.I.0" xml:space="preserve" approved="yes">
+				<source>no</source>
+				<target>non</target>
+			</trans-unit>
+			<trans-unit id="tx_kesmallads_smallads.iscommercial.I.1" xml:space="preserve" approved="yes">
+				<source>yes</source>
+				<target>oui</target>
+			</trans-unit>
+			<trans-unit id="tx_kesmallads_smallads.iscommercial" xml:space="preserve" approved="yes">
+				<source>Is this a commercial Smallad?</source>
+				<target>Annonce commerciale?</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

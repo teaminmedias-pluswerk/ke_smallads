@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2018-12-11T20:35:48Z" product-name="ke_smallads">
+		<header/>
+		<body>
+			<trans-unit id="tx_kesmallads_smallads.user" xml:space="preserve">
+				<source>Userselection</source>
+			</trans-unit>
+			<trans-unit id="tx_kesmallads_smallads.phone" xml:space="preserve">
+				<source>Phone</source>
+			</trans-unit>
+			<trans-unit id="tx_kesmallads_smallads.email" xml:space="preserve">
+				<source>Email</source>
+			</trans-unit>
+			<trans-unit id="tx_kesmallads_smallads" xml:space="preserve">
+				<source>Smallads</source>
+			</trans-unit>
+			<trans-unit id="tx_kesmallads_smallads.cat" xml:space="preserve">
+				<source>1. Category</source>
+			</trans-unit>
+			<trans-unit id="tx_kesmallads_smallads.cat2" xml:space="preserve">
+				<source>2. Category</source>
+			</trans-unit>
+			<trans-unit id="tx_kesmallads_smallads.cat3" xml:space="preserve">
+				<source>Sub-Category</source>
+			</trans-unit>
+			<trans-unit id="tx_kesmallads_smallads.content" xml:space="preserve">
+				<source>Content</source>
+			</trans-unit>
+			<trans-unit id="tx_kesmallads_smallads.image" xml:space="preserve">
+				<source>Image</source>
+			</trans-unit>
+			<trans-unit id="tx_kesmallads_smallads.displayemail" xml:space="preserve">
+				<source>Should the email address be displayed?</source>
+			</trans-unit>
+			<trans-unit id="tx_kesmallads_smallads.title" xml:space="preserve">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_kesmallads_smallads.reviewed" xml:space="preserve">
+				<source>reviewed</source>
+			</trans-unit>
+			<trans-unit id="tt_content.list_type_pi1" xml:space="preserve">
+				<source>Smallads</source>
+			</trans-unit>
+			<trans-unit id="tx_kesmallads_smallads.fe_user_uid" xml:space="preserve">
+				<source>Frontend User</source>
+			</trans-unit>
+			<trans-unit id="tx_kesmallads_smallads.comment" xml:space="preserve">
+				<source>Comment</source>
+			</trans-unit>
+			<trans-unit id="tx_kesmallads_smallads.iscommercial.I.0" xml:space="preserve">
+				<source>no</source>
+			</trans-unit>
+			<trans-unit id="tx_kesmallads_smallads.iscommercial.I.1" xml:space="preserve">
+				<source>yes</source>
+			</trans-unit>
+			<trans-unit id="tx_kesmallads_smallads.iscommercial" xml:space="preserve">
+				<source>Is this a commercial Smallad?</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
