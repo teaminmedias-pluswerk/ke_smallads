@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2018-12-12T08:35:18Z" product-name="ke_smallads">
+		<header/>
+		<body>
+			<trans-unit id="checkbox_submit_button" xml:space="preserve">
+				<source>OK</source>
+			</trans-unit>
+			<trans-unit id="fileupload.error.nodir" xml:space="preserve">
+				<source>Error while uploading the image: Image upload directory does not exist.</source>
+			</trans-unit>
+			<trans-unit id="fileupload.error.toobig" xml:space="preserve">
+				<source>Error while uploading the image: Image size is too big.</source>
+			</trans-unit>
+			<trans-unit id="fileupload.error.mimenotallowed" xml:space="preserve">
+				<source>Error while uploading the image: File not allowed.</source>
+			</trans-unit>
+			<trans-unit id="fileupload.error.extensionnotallowed" xml:space="preserve">
+				<source>Error while uploading the image: File Extension not allowed.</source>
+			</trans-unit>
+			<trans-unit id="fileupload.uploadsuccesfull" xml:space="preserve">
+				<source>Imagefile uploaded successfully.</source>
+			</trans-unit>
+			<trans-unit id="list_mode_1" xml:space="preserve">
+				<source>All</source>
+			</trans-unit>
+			<trans-unit id="back" xml:space="preserve">
+				<source>Back</source>
+			</trans-unit>
+			<trans-unit id="pi_list_browseresults_prev" xml:space="preserve">
+				<source>&lt; Previous</source>
+			</trans-unit>
+			<trans-unit id="pi_list_browseresults_page" xml:space="preserve">
+				<source>Page</source>
+			</trans-unit>
+			<trans-unit id="pi_list_browseresults_next" xml:space="preserve">
+				<source>Next &gt;</source>
+			</trans-unit>
+			<trans-unit id="pi_list_browseresults_displays" xml:space="preserve">
+				<source>Displaying results ###SPAN_BEGIN###%s to %s&lt;/span&gt; out of ###SPAN_BEGIN###%s&lt;/span&gt;</source>
+			</trans-unit>
+			<trans-unit id="pi_list_searchBox_search" xml:space="preserve">
+				<source>Search</source>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_kesmallads.mode_selector" xml:space="preserve">
+				<source>mode for the smallads plugin</source>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_kesmallads.mode.I.0" xml:space="preserve">
+				<source>Show smallads / Show search results</source>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_kesmallads.mode.I.1" xml:space="preserve">
+				<source>Show form for a new smallad / process form</source>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_kesmallads.mode.I.2" xml:space="preserve">
+				<source>Show smallads teaser</source>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_kesmallads.mode.I.3" xml:space="preserve">
+				<source>Show short linked search results</source>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_kesmallads.mode.I.4" xml:space="preserve">
+				<source>Logged in users can edit/delete their smallads</source>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_kesmallads.target_id" xml:space="preserve">
+				<source>Target-ID (empty for current page)</source>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_kesmallads.no_results_text" xml:space="preserve">
+				<source>&quot;No search results&quot; text</source>
+			</trans-unit>
+			<trans-unit id="tx_kesmallads_smallads.phone" xml:space="preserve">
+				<source>phone</source>
+			</trans-unit>
+			<trans-unit id="tx_kesmallads_smallads.email" xml:space="preserve">
+				<source>email</source>
+			</trans-unit>
+			<trans-unit id="no_static_template" xml:space="preserve">
+				<source>It seems that the ke_smallads static template is not included.&lt;br /&gt;Please go to your template and include it (Include static (from extensions)).</source>
+			</trans-unit>
+			<trans-unit id="no_user_logged_in" xml:space="preserve">
+				<source>You are not logged in and therefore not allowed to edit any smallads.</source>
+			</trans-unit>
+			<trans-unit id="no_user_logged_in_delete" xml:space="preserve">
+				<source>You are not logged in and therefore not allowed to delete any smallads.</source>
+			</trans-unit>
+			<trans-unit id="not_your_smallad" xml:space="preserve">
+				<source>You are not allowed to edit this smallad.</source>
+			</trans-unit>
+			<trans-unit id="not_your_smallad_delete" xml:space="preserve">
+				<source>You are not allowed to delete this smallad.</source>
+			</trans-unit>
+			<trans-unit id="success_delete" xml:space="preserve">
+				<source>Your smallad has been deleted.</source>
+			</trans-unit>
+			<trans-unit id="edit_link" xml:space="preserve">
+				<source>Edit</source>
+			</trans-unit>
+			<trans-unit id="delete_link" xml:space="preserve">
+				<source>Delete</source>
+			</trans-unit>
+			<trans-unit id="really_delete" xml:space="preserve">
+				<source>Do you really want to delete this entry?</source>
+			</trans-unit>
+			<trans-unit id="edit_image_note" xml:space="preserve">
+				<source>If you want to keep this image, just leave the field &quot;Image&quot; empty.</source>
+			</trans-unit>
+			<trans-unit id="no_allowed_to_update" xml:space="preserve">
+				<source>You are not allowed to update that smallad.</source>
+			</trans-unit>
+			<trans-unit id="visible_until" xml:space="preserve">
+				<source>visible until: </source>
+			</trans-unit>
+			<trans-unit id="maxchars_begin" xml:space="preserve">
+				<source>You have </source>
+			</trans-unit>
+			<trans-unit id="maxchars_end" xml:space="preserve">
+				<source> characters left.</source>
+			</trans-unit>
+			<trans-unit id="phone_or_email_has_to_be_filled_out" xml:space="preserve">
+				<source>Please fill out phone or email.</source>
+			</trans-unit>
+			<trans-unit id="email_address_not_valid" xml:space="preserve">
+				<source>The email address is not valid.</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

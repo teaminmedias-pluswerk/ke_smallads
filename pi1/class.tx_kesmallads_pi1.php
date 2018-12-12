@@ -27,7 +27,12 @@
  * @author	Christian Bülter <buelter@kennziffer.com>
  */
 
-class tx_kesmallads_pi1 extends tslib_pibase {
+use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
+use TYPO3\CMS\Core\Utility\GeneralUtility;
+use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
+
+
+class tx_kesmallads_pi1 extends \TYPO3\CMS\Frontend\Plugin\AbstractPlugin {
 	var $prefixId='tx_kesmallads_pi1';						// Same as class name
 	var $scriptRelPath='pi1/class.tx_kesmallads_pi1.php';	// Path to this script relative to the extension dir.
 	var $extKey='ke_smallads';								// The extension key.
@@ -44,9 +49,9 @@ class tx_kesmallads_pi1 extends tslib_pibase {
 	 */
 	function main($content,$conf)	{/*{{{*/
 		$content .= '';
-		$this->siteRelPath=t3lib_extMgm::siteRelPath($this->extKey); 	// get the path to this extension from main directory
+		$this->siteRelPath=ExtensionManagementUtility::siteRelPath($this->extKey); 	// get the path to this extension from main directory
 		$this->pi_initPIflexform(); 									// Init and get the flexform data of the plugin
-		$this->postVars=t3lib_div::_POST();								// get all the POST-Variables
+		$this->postVars=GeneralUtility::_POST();								// get all the POST-Variables
 
 		// get the pid list
 		if (strstr($this->cObj->currentRecord,'tt_content'))	{
@@ -147,7 +152,7 @@ class tx_kesmallads_pi1 extends tslib_pibase {
 		$content.='';
 
 		// make a local instance of tslib_cObj
-		$lcObj=t3lib_div::makeInstance('tslib_cObj');
+		$lcObj=GeneralUtility::makeInstance(ContentObjectRenderer::class);
 
 		// do some Checks
 		if (empty($this->conf['pidList'])) return 'Plugin Error: no pidList selected';
@@ -173,7 +178,7 @@ class tx_kesmallads_pi1 extends tslib_pibase {
 		}
 
 		// if email address has been filled out, validate it
-		if ($this->postVars['email'] && !t3lib_div::validEmail($this->postVars['email'])) {
+		if ($this->postVars['email'] && !GeneralUtility::validEmail($this->postVars['email'])) {
 			$errors[] = $this->pi_getLL('email_address_not_valid');
 		}
 
@@ -285,7 +290,7 @@ class tx_kesmallads_pi1 extends tslib_pibase {
 			}
 			if ($emaildata) {
 				$emaildata['body']=str_replace("|","\n",$emaildata['body']);
-				t3lib_div::plainMailEncoded($emaildata['toEmail'],
+				GeneralUtility::plainMailEncoded($emaildata['toEmail'],
 						$emaildata['subject'],
 						sprintf($emaildata['body'],$GLOBALS['TSFE']->page['title'].', '.$insertFields['cat']."\n",html_entity_decode($insertFields['title'])."\n",html_entity_decode($insertFields['content'])."\n".$fe_userinfo),
 						'From: '.$emaildata['fromName'].' <'.$emaildata['fromEmail'].'>'
@@ -302,7 +307,7 @@ class tx_kesmallads_pi1 extends tslib_pibase {
 			}
 			if ($emaildata && !empty($insertFields['email'])) {
 				$emaildata['body']=str_replace("|","\n",$emaildata['body']);
-				t3lib_div::plainMailEncoded($insertFields['email'],
+				GeneralUtility::plainMailEncoded($insertFields['email'],
 						$emaildata['subject'],
 						sprintf($emaildata['body'],$GLOBALS['TSFE']->page['title'].', '.$insertFields['cat']."\n",html_entity_decode($insertFields['title'])."\n",html_entity_decode($insertFields['content'])."\n"),
 						'From: '.$emaildata['fromName'].' <'.$emaildata['fromEmail'].'>'
@@ -320,7 +325,7 @@ class tx_kesmallads_pi1 extends tslib_pibase {
 					if (is_array($rowArray))	{
 						foreach ($rowArray as $row)	{
 							$emaildata['body'] = str_replace("|","\n",$emaildata['body']);
-							t3lib_div::plainMailEncoded(
+							GeneralUtility::plainMailEncoded(
 								$row['email'],
 								$emaildata['subject'],
 								sprintf(
@@ -575,7 +580,7 @@ class tx_kesmallads_pi1 extends tslib_pibase {
 
 			// display the image
 			if ($record['image']) {
-				$lcObj=t3lib_div::makeInstance('tslib_cObj');
+				$lcObj=GeneralUtility::makeInstance(ContentObjectRenderer::class);
 				$this->conf['smalladimage.']['file']=$this->uploadFolder.$record['image'];
 				$this->conf['smalladimage.']['altText']=$record['title'];
 				$content .= $lcObj->IMAGE($this->conf['smalladimage.']);
@@ -643,7 +648,7 @@ class tx_kesmallads_pi1 extends tslib_pibase {
 	 * @return string
 	 */
 	function renderJavascriptFunctionsForDynamicForm() {/*{{{*/
-		$lcObj=t3lib_div::makeInstance('tslib_cObj');
+		$lcObj=GeneralUtility::makeInstance(ContentObjectRenderer::class);
 
 		$content = '';
 
@@ -747,7 +752,7 @@ for (i=0; i<subCategoryList[selectedcat].length; i++) {
 		$content='';
 
 		// make a local instance of tslib_cObj
-		$lcObj=t3lib_div::makeInstance('tslib_cObj');
+		$lcObj=GeneralUtility::makeInstance(ContentObjectRenderer::class);
 
 		// get values from static TS
 		$lConf=$this->conf['teaserView.'];
@@ -805,7 +810,7 @@ for (i=0; i<subCategoryList[selectedcat].length; i++) {
 		$lConf=$this->conf['listView.'];
 
 		// make a local instance of tslib_cObj
-		$lcObj=t3lib_div::makeInstance('tslib_cObj');
+		$lcObj=GeneralUtility::makeInstance(ContentObjectRenderer::class);
 
 		// Try to get the "No Image is available"-Image from TS.
 		// Otherwise use the standard image.
@@ -822,7 +827,7 @@ for (i=0; i<subCategoryList[selectedcat].length; i++) {
 		}
 
 		// make items for the mode (= categories)
-		// first mode = all categories, text is defined in locallang.php
+		// first mode = all categories, text is defined in locallang.xlf
 		// more modes = categories (defined in the typscript template)
 		$items=array();
 		if ($this->conf['modeSelectorType'] == 'buttons') {
@@ -1028,7 +1033,7 @@ for (i=0; i<subCategoryList[selectedcat].length; i++) {
 	 * @return string
 	 */
 	function renderDropdownModeSelector() {
-		$lcObj=t3lib_div::makeInstance('tslib_cObj');
+		$lcObj=GeneralUtility::makeInstance(ContentObjectRenderer::class);
 		$content = '';
 
 		// get all the first and second categories for which we have elements
@@ -1040,7 +1045,7 @@ for (i=0; i<subCategoryList[selectedcat].length; i++) {
 				$cat1_list .= $row['cat'] . ',';
 			}
 		}
-		$cat1_list = t3lib_div::uniqueList($cat1_list);
+		$cat1_list = GeneralUtility::uniqueList($cat1_list);
 
 		// for the second category get only the entries which belong to the
 		// already selected first one
@@ -1051,7 +1056,7 @@ for (i=0; i<subCategoryList[selectedcat].length; i++) {
 				$cat2_list .= $row['cat2'] . ',';
 			}
 		}
-		$cat2_list = t3lib_div::uniqueList($cat2_list);
+		$cat2_list = GeneralUtility::uniqueList($cat2_list);
 
 		// for the third category get only the entries which belong to the
 		// already selected second one
@@ -1062,14 +1067,14 @@ for (i=0; i<subCategoryList[selectedcat].length; i++) {
 				$cat3_list .= $row['cat3'] . ',';
 			}
 		}
-		$cat3_list = t3lib_div::uniqueList($cat3_list);
+		$cat3_list = GeneralUtility::uniqueList($cat3_list);
 
 		// Categories are stored as real names in the databases, so we
 		// can use them directly as values for the select field
 		if ($cat1_list) {
 			$content .= '<select name="' . $this->prefixId . '[modeselector_cat]" id="kesmalladsform_modeselector1" size="1" class="modeselector_selectclass">';
 			$content .= '<option value="' . $this->pi_getLL('list_mode_1') . '">' . $this->pi_getLL('list_mode_1') . '</option>';
-			foreach(t3lib_div::trimExplode(',', $cat1_list) as $key => $value) {
+			foreach(GeneralUtility::trimExplode(',', $cat1_list) as $key => $value) {
 				$selected = $this->piVars['modeselector_cat'] == $value ? ' selected' : '';
 				$content .= '<option value="' . $value . '"' . $selected . '>' . $value . '</option>';
 			}
@@ -1079,7 +1084,7 @@ for (i=0; i<subCategoryList[selectedcat].length; i++) {
 		if ($cat2_list) {
 			$content .= '<select name="' . $this->prefixId . '[modeselector_cat2]" id="kesmalladsform_modeselector2" size="1" class="modeselector_selectclass">';
 			$content .= '<option value="' . $this->pi_getLL('list_mode_1') . '">' . $this->pi_getLL('list_mode_1') . '</option>';
-			foreach(t3lib_div::trimExplode(',', $cat2_list) as $key => $value) {
+			foreach(GeneralUtility::trimExplode(',', $cat2_list) as $key => $value) {
 				$selected = $this->piVars['modeselector_cat2'] == $value ? ' selected' : '';
 				$content .= '<option value="' . $value . '"' . $selected . '>' . $value . '</option>';
 			}
@@ -1091,7 +1096,7 @@ for (i=0; i<subCategoryList[selectedcat].length; i++) {
 			if ($cat3_list) {
 				$content .= '<select name="' . $this->prefixId . '[modeselector_cat3]" id="kesmalladsform_modeselector3" size="1" class="modeselector_selectclass">';
 				$content .= '<option value="' . $this->pi_getLL('list_mode_1') . '">' . $this->pi_getLL('list_mode_1') . '</option>';
-				foreach(t3lib_div::trimExplode(',', $cat3_list) as $key => $value) {
+				foreach(GeneralUtility::trimExplode(',', $cat3_list) as $key => $value) {
 					$selected = $this->piVars['modeselector_cat3'] == $value ? ' selected' : '';
 					$content .= '<option value="' . $value . '"' . $selected . '>' . $value . '</option>';
 				}
@@ -1113,7 +1118,7 @@ for (i=0; i<subCategoryList[selectedcat].length; i++) {
 	 * @return string
 	 */
 	function renderCheckboxModeSelector() {
-		$lcObj=t3lib_div::makeInstance('tslib_cObj');
+		$lcObj=GeneralUtility::makeInstance(ContentObjectRenderer::class);
 		$content = '';
 
 			// get all of the first categories for which we have elements
@@ -1129,7 +1134,7 @@ for (i=0; i<subCategoryList[selectedcat].length; i++) {
 				$cat1_list .= $row['cat'] . ',';
 			}
 		}
-		$cat1_list = t3lib_div::uniqueList($cat1_list);
+		$cat1_list = GeneralUtility::uniqueList($cat1_list);
 
 			// second category: Get all categories we have elements for
 		$cat2_list = '';
@@ -1143,7 +1148,7 @@ for (i=0; i<subCategoryList[selectedcat].length; i++) {
 				$cat2_list .= $row['cat2'] . ',';
 			}
 		}
-		$cat2_list = t3lib_div::uniqueList($cat2_list);
+		$cat2_list = GeneralUtility::uniqueList($cat2_list);
 
 			// third category (subcategory): Get all categories we have elements for
 		$cat3_list = '';
@@ -1157,7 +1162,7 @@ for (i=0; i<subCategoryList[selectedcat].length; i++) {
 				$cat3_list .= $row['cat3'] . ',';
 			}
 		}
-		$cat3_list = t3lib_div::uniqueList($cat3_list);
+		$cat3_list = GeneralUtility::uniqueList($cat3_list);
 
 			/****************************************
 			* Render the Checkboxes
@@ -1166,7 +1171,7 @@ for (i=0; i<subCategoryList[selectedcat].length; i++) {
 			// can use them directly as values for the select field
 		if ($cat1_list) {
 			$content .= '<div class="cat1">';
-			foreach(t3lib_div::trimExplode(',', $cat1_list) as $key => $value) {
+			foreach(GeneralUtility::trimExplode(',', $cat1_list) as $key => $value) {
 
 					// Find out if this is checked
 				if (is_array($this->piVars['modeselector_cat']) && in_array($value, $this->piVars['modeselector_cat'])) {
@@ -1216,7 +1221,7 @@ for (i=0; i<subCategoryList[selectedcat].length; i++) {
 						// render the sub-category if there is at least one
 						// element and it belongs to the currently rendered
 						// category of level 2
-					if ($sub_cat_conf['belongsTo'] == $cat_conf['value'] && t3lib_div::inList($cat3_list, $sub_cat_label)) {
+					if ($sub_cat_conf['belongsTo'] == $cat_conf['value'] && GeneralUtility::inList($cat3_list, $sub_cat_label)) {
 
 							// Find out if this is checked
 						if (is_array($this->piVars['modeselector_cat3']) && in_array($sub_cat_label, $this->piVars['modeselector_cat3'])) {
@@ -1341,7 +1346,7 @@ for (i=0; i<subCategoryList[selectedcat].length; i++) {
 	 */
 	function getFieldContent($fN) {/*{{{*/
 		// make a local instance of tslib_cObj
-		$lcObj=t3lib_div::makeInstance('tslib_cObj');
+		$lcObj=GeneralUtility::makeInstance(ContentObjectRenderer::class);
 		switch($fN) {
 			case "image":
 				// This will output the image
@@ -1385,7 +1390,7 @@ for (i=0; i<subCategoryList[selectedcat].length; i++) {
 	 */
 	function getCategoryName($catkey,$valueArray=array()) {/*{{{*/
 		// make a local instance of tslib_cObj
-		$lcObj=t3lib_div::makeInstance('tslib_cObj');
+		$lcObj=GeneralUtility::makeInstance(ContentObjectRenderer::class);
 		if (is_array($valueArray)) {
 			foreach ($valueArray as $cat) {
 				// return cat as a TEXT-Element
@@ -1403,10 +1408,10 @@ for (i=0; i<subCategoryList[selectedcat].length; i++) {
 
 	/**
 	 * OBSOLETE -- categories are now configured via ts
-	 * Get Values for select-fields from locallang.php (Of course, normally you
+	 * Get Values for select-fields from locallang.xlf (Of course, normally you
 	 * would configure such things via flexforms or typoscript But I didn't
 	 * know how to use that values in the backend (web->list modul), so I chose
-	 * locallang.php as a config-file)
+	 * locallang.xlf as a config-file)
 	 */
 	function getValueArrayFromLL($lConf,$dataArrayRow,$locallang_index) {/*{{{*/
 		unset ($lConf['dataArray.'][$dataArrayRow]['valueArray.']);

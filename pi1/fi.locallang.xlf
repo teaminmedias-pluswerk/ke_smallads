@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" target-language="fi" datatype="plaintext" original="messages" date="2018-12-12T08:35:18Z" product-name="ke_smallads">
+		<header/>
+		<body>
+			<trans-unit id="fileupload.error.nodir" xml:space="preserve" approved="yes">
+				<source>Error while uploading the image: Image upload directory does not exist.</source>
+				<target>Kuvan vienniss� tapahtui virhe: kuvan vientihakemistoa ei ole olemassa.</target>
+			</trans-unit>
+			<trans-unit id="fileupload.error.toobig" xml:space="preserve" approved="yes">
+				<source>Error while uploading the image: Image size is too big.</source>
+				<target>Kuvan vienniss� tapahtui virhe: kuvan koko on liian iso.</target>
+			</trans-unit>
+			<trans-unit id="fileupload.error.mimenotallowed" xml:space="preserve" approved="yes">
+				<source>Error while uploading the image: File not allowed.</source>
+				<target>Kuvan vienniss� tapahtui virhe: tiedoston vienti ei ole sallittu.</target>
+			</trans-unit>
+			<trans-unit id="fileupload.error.extensionnotallowed" xml:space="preserve" approved="yes">
+				<source>Error while uploading the image: File Extension not allowed.</source>
+				<target>Kuvan vienniss� tapahtui virhe: kuvan tiedostop��te ei ole sallittu.</target>
+			</trans-unit>
+			<trans-unit id="fileupload.uploadsuccesfull" xml:space="preserve" approved="yes">
+				<source>Imagefile uploaded successfully.</source>
+				<target>Kuvan vienti onnistui.</target>
+			</trans-unit>
+			<trans-unit id="list_mode_1" xml:space="preserve" approved="yes">
+				<source>All</source>
+				<target>Kaikki</target>
+			</trans-unit>
+			<trans-unit id="back" xml:space="preserve" approved="yes">
+				<source>Back</source>
+				<target>Takaisin</target>
+			</trans-unit>
+			<trans-unit id="pi_list_browseresults_prev" xml:space="preserve" approved="yes">
+				<source>&lt; Previous</source>
+				<target>&lt; Edellinen</target>
+			</trans-unit>
+			<trans-unit id="pi_list_browseresults_page" xml:space="preserve" approved="yes">
+				<source>Page</source>
+				<target>Sivu</target>
+			</trans-unit>
+			<trans-unit id="pi_list_browseresults_next" xml:space="preserve" approved="yes">
+				<source>Next &gt;</source>
+				<target>Seuraava &gt;</target>
+			</trans-unit>
+			<trans-unit id="pi_list_browseresults_displays" xml:space="preserve" approved="yes">
+				<source>Displaying results ###SPAN_BEGIN###%s to %s&lt;/span&gt; out of ###SPAN_BEGIN###%s&lt;/span&gt;</source>
+				<target>N�yt� tulokset alkaen ###SPAN_BEGIN###%s %s&lt;/span&gt;  ###SPAN_BEGIN###%s asti&lt;/span&gt;</target>
+			</trans-unit>
+			<trans-unit id="pi_list_searchBox_search" xml:space="preserve" approved="yes">
+				<source>Search</source>
+				<target>Hae</target>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_kesmallads.mode_selector" xml:space="preserve" approved="yes">
+				<source>mode for the smallads plugin</source>
+				<target>smallads-lis�osan moodi</target>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_kesmallads.mode.I.0" xml:space="preserve" approved="yes">
+				<source>Show smallads / Show search results</source>
+				<target>N�yt� smallads-tuotteet / N�yt� hakutulokset</target>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_kesmallads.mode.I.1" xml:space="preserve" approved="yes">
+				<source>Show form for a new smallad / process form</source>
+				<target>N�yt� uuden tuotteen lomake/ prosessoi t�m� lomake</target>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_kesmallads.mode.I.2" xml:space="preserve" approved="yes">
+				<source>Show smallads teaser</source>
+				<target>N�yt� houkutinteksti</target>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_kesmallads.mode.I.3" xml:space="preserve" approved="yes">
+				<source>Show short linked search results</source>
+				<target>N�yt� pikalinkitetyt hakutulokset</target>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_kesmallads.target_id" xml:space="preserve" approved="yes">
+				<source>Target-ID (empty for current page)</source>
+				<target>Kohteen ID (j�t� tyhj�ksi t�lle sivulle)</target>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_kesmallads.no_results_text" xml:space="preserve" approved="yes">
+				<source>&quot;No search results&quot; text</source>
+				<target>&quot;Ei-etsint�tulosta&quot; -teksti</target>
+			</trans-unit>
+			<trans-unit id="tx_kesmallads_smallads.phone" xml:space="preserve" approved="yes">
+				<source>phone</source>
+				<target>puhelinnumero</target>
+			</trans-unit>
+			<trans-unit id="tx_kesmallads_smallads.email" xml:space="preserve" approved="yes">
+				<source>email</source>
+				<target>s-posti</target>
+			</trans-unit>
+			<trans-unit id="no_static_template" xml:space="preserve" approved="yes">
+				<source>It seems that the ke_smallads static template is not included.&lt;br /&gt;Please go to your template and include it (Include static (from extensions)).</source>
+				<target>N�ytt�� silt�, ett� pienilmoitusten (ke_smallads) tarvitsemaa staattista mallia ei ole asennettu.&lt;br /&gt;Ole hyv� ja liit� se asennettuihin malleihin.</target>
+			</trans-unit>
+			<trans-unit id="no_user_logged_in" xml:space="preserve" approved="yes">
+				<source>You are not logged in and therefore not allowed to edit any smallads.</source>
+				<target>Et ole kirjautunut ja siksi sinulla ei ole oikeuksia muokata mit��n pienilmoitusta.</target>
+			</trans-unit>
+			<trans-unit id="no_user_logged_in_delete" xml:space="preserve" approved="yes">
+				<source>You are not logged in and therefore not allowed to delete any smallads.</source>
+				<target>Et ole kirjautunut ja siksi sinulla ei ole oikeuksia poistaa mit��n pienilmoitusta.</target>
+			</trans-unit>
+			<trans-unit id="not_your_smallad" xml:space="preserve" approved="yes">
+				<source>You are not allowed to edit this smallad.</source>
+				<target>Sinulla ei ole oikeuksia muokata t�t� pienilmoitusta.</target>
+			</trans-unit>
+			<trans-unit id="not_your_smallad_delete" xml:space="preserve" approved="yes">
+				<source>You are not allowed to delete this smallad.</source>
+				<target>Sinulla ei ole oikeuksia poistaa t�t� pienilmoitusta.</target>
+			</trans-unit>
+			<trans-unit id="success_delete" xml:space="preserve" approved="yes">
+				<source>Your smallad has been deleted.</source>
+				<target>Pienilmoituksesi on poistettu.</target>
+			</trans-unit>
+			<trans-unit id="edit_link" xml:space="preserve" approved="yes">
+				<source>Edit</source>
+				<target>Muokkaa</target>
+			</trans-unit>
+			<trans-unit id="delete_link" xml:space="preserve" approved="yes">
+				<source>Delete</source>
+				<target>Poista</target>
+			</trans-unit>
+			<trans-unit id="really_delete" xml:space="preserve" approved="yes">
+				<source>Do you really want to delete this entry?</source>
+				<target>Haluatko todella poistaa t�m�n kirjauksen?</target>
+			</trans-unit>
+			<trans-unit id="edit_image_note" xml:space="preserve" approved="yes">
+				<source>If you want to keep this image, just leave the field &quot;Image&quot; empty.</source>
+				<target>Jos haluat pit�� t�m�n kuvan, j�t� kentt� &quot;Kuva&quot; tyhj�ksi.</target>
+			</trans-unit>
+			<trans-unit id="no_allowed_to_update" xml:space="preserve" approved="yes">
+				<source>You are not allowed to update that smallad.</source>
+				<target>Sinulla ei ole oikeuksia p�ivitt�� t�t� pienilmoitus-tietuetta.</target>
+			</trans-unit>
+			<trans-unit id="visible_until" xml:space="preserve" approved="yes">
+				<source>visible until: </source>
+				<target>N�kyy seuraavaan p�iv�m��r��n asti: </target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

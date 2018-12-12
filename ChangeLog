@@ -1,5 +1,7 @@
 
 Version 1.3.4 (2018/12)
+* task: transform the locallang xml files into locallang xlf files
+* task: restructuring of PHP code for TYPO3 8
 * feature: make user field visible (village)
 
 Version 1.3.3

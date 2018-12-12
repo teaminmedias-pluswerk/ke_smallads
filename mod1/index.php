@@ -31,7 +31,7 @@
 unset($MCONF);
 require ('conf.php');
 require ($BACK_PATH.'init.php');
-$LANG->includeLLFile('EXT:ke_smallads/mod1/locallang.php');
+$LANG->includeLLFile('EXT:ke_smallads/mod1/locallang.xlf');
 
 $BE_USER->modAccess($MCONF,1);	// This checks permissions and exits if the users has no permission for entry.
 	// DEFAULT initialization of a module [END]

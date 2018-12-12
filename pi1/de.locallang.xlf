@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2018-12-12T08:35:18Z" product-name="ke_smallads">
+		<header/>
+		<body>
+			<trans-unit id="fileupload.error.nodir" xml:space="preserve" approved="yes">
+				<source>Error while uploading the image: Image upload directory does not exist.</source>
+				<target>Fehler bei Hochladen des Bildes: Verzeichnis für Bilder existiert nicht.</target>
+			</trans-unit>
+			<trans-unit id="fileupload.error.toobig" xml:space="preserve" approved="yes">
+				<source>Error while uploading the image: Image size is too big.</source>
+				<target>Fehler bei Hochladen des Bildes: Bilddatei ist zu groß.</target>
+			</trans-unit>
+			<trans-unit id="fileupload.error.mimenotallowed" xml:space="preserve" approved="yes">
+				<source>Error while uploading the image: File not allowed.</source>
+				<target>Fehler bei Hochladen des Bildes: Datei nicht zugelassen.</target>
+			</trans-unit>
+			<trans-unit id="fileupload.error.extensionnotallowed" xml:space="preserve" approved="yes">
+				<source>Error while uploading the image: File Extension not allowed.</source>
+				<target>Fehler bei Hochladen des Bildes: Datei nicht zugelassen.</target>
+			</trans-unit>
+			<trans-unit id="fileupload.uploadsuccesfull" xml:space="preserve" approved="yes">
+				<source>Imagefile uploaded successfully.</source>
+				<target>Bilddatei wurde hochgeladen.</target>
+			</trans-unit>
+			<trans-unit id="list_mode_1" xml:space="preserve" approved="yes">
+				<source>All</source>
+				<target>Alle</target>
+			</trans-unit>
+			<trans-unit id="pi_list_browseresults_prev" xml:space="preserve" approved="yes">
+				<source>&lt; Previous</source>
+				<target>&lt; Zurück</target>
+			</trans-unit>
+			<trans-unit id="pi_list_browseresults_page" xml:space="preserve" approved="yes">
+				<source>Page</source>
+				<target>Seite</target>
+			</trans-unit>
+			<trans-unit id="pi_list_browseresults_next" xml:space="preserve" approved="yes">
+				<source>Next &gt;</source>
+				<target>Weiter &gt;</target>
+			</trans-unit>
+			<trans-unit id="pi_list_browseresults_displays" xml:space="preserve" approved="yes">
+				<source>Displaying results ###SPAN_BEGIN###%s to %s&lt;/span&gt; out of ###SPAN_BEGIN###%s&lt;/span&gt;</source>
+				<target>Kleinanzeigen ###SPAN_BEGIN###%s bis %s&lt;/span&gt; von ###SPAN_BEGIN###%s&lt;/span&gt;</target>
+			</trans-unit>
+			<trans-unit id="pi_list_searchBox_search" xml:space="preserve" approved="yes">
+				<source>Search</source>
+				<target>Suche</target>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_kesmallads.mode_selector" xml:space="preserve" approved="yes">
+				<source>mode for the smallads plugin</source>
+				<target>Modus für das Kleinanzeigen-Plugin</target>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_kesmallads.mode.I.0" xml:space="preserve" approved="yes">
+				<source>Show smallads / Show search results</source>
+				<target>Kleinanzeigen anzeigen</target>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_kesmallads.mode.I.1" xml:space="preserve" approved="yes">
+				<source>Show form for a new smallad / process form</source>
+				<target>Formular für neue Kleinanzeige / Formular verarbeiten</target>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_kesmallads.mode.I.2" xml:space="preserve" approved="yes">
+				<source>Show smallads teaser</source>
+				<target>Kleinanzeigen-Anreißer anzeigen</target>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_kesmallads.mode.I.3" xml:space="preserve" approved="yes">
+				<source>Show short linked search results</source>
+				<target>Kurze verlinkte Suchergebnisse anzeigen</target>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_kesmallads.mode.I.4" xml:space="preserve" approved="yes">
+				<source>Logged in users can edit/delete their smallads</source>
+				<target>Angemeldete Benutzer können eigene Anzeigen ändern/löschen</target>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_kesmallads.target_id" xml:space="preserve" approved="yes">
+				<source>Target-ID (empty for current page)</source>
+				<target>ID der Zielseite (leer für diese Seite)</target>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_kesmallads.no_results_text" xml:space="preserve" approved="yes">
+				<source>&quot;No search results&quot; text</source>
+				<target>Text für &quot;Keine Suchergebnisse&quot;</target>
+			</trans-unit>
+			<trans-unit id="tx_kesmallads_smallads.phone" xml:space="preserve" approved="yes">
+				<source>phone</source>
+				<target>Telefon</target>
+			</trans-unit>
+			<trans-unit id="tx_kesmallads_smallads.email" xml:space="preserve" approved="yes">
+				<source>email</source>
+				<target>E-Mail</target>
+			</trans-unit>
+			<trans-unit id="no_static_template" xml:space="preserve" approved="yes">
+				<source>It seems that the ke_smallads static template is not included.&lt;br /&gt;Please go to your template and include it (Include static (from extensions)).</source>
+				<target>Anscheinend ist das statisches Template für ke_smallads nicht eingefügt worden.&lt;br /&gt;Bitte fügen Sie das entsprechende statische Template ein (Include static (from extensions)).</target>
+			</trans-unit>
+			<trans-unit id="no_user_logged_in" xml:space="preserve" approved="yes">
+				<source>You are not logged in and therefore not allowed to edit any smallads.</source>
+				<target>Sie sind nicht eingeloggt und können daher keine Kleinanzeigen bearbeiten.</target>
+			</trans-unit>
+			<trans-unit id="no_user_logged_in_delete" xml:space="preserve" approved="yes">
+				<source>You are not logged in and therefore not allowed to delete any smallads.</source>
+				<target>Sie sind nicht eingeloggt und können daher keine Kleinanzeigen löschen.</target>
+			</trans-unit>
+			<trans-unit id="not_your_smallad" xml:space="preserve" approved="yes">
+				<source>You are not allowed to edit this smallad.</source>
+				<target>Sie dürfen diese Kleinanzeige nicht bearbeiten.</target>
+			</trans-unit>
+			<trans-unit id="not_your_smallad_delete" xml:space="preserve" approved="yes">
+				<source>You are not allowed to delete this smallad.</source>
+				<target>Sie dürfen diese Kleinanzeige nicht löschen.</target>
+			</trans-unit>
+			<trans-unit id="success_delete" xml:space="preserve" approved="yes">
+				<source>Your smallad has been deleted.</source>
+				<target>Ihre Kleinanzeige wurde gelöscht.</target>
+			</trans-unit>
+			<trans-unit id="edit_link" xml:space="preserve" approved="yes">
+				<source>Edit</source>
+				<target>ändern</target>
+			</trans-unit>
+			<trans-unit id="delete_link" xml:space="preserve" approved="yes">
+				<source>Delete</source>
+				<target>Löschen</target>
+			</trans-unit>
+			<trans-unit id="really_delete" xml:space="preserve" approved="yes">
+				<source>Do you really want to delete this entry?</source>
+				<target>Möchten Sie diesen Eintrag wirklich löschen?</target>
+			</trans-unit>
+			<trans-unit id="edit_image_note" xml:space="preserve" approved="yes">
+				<source>If you want to keep this image, just leave the field &quot;Image&quot; empty.</source>
+				<target>Falls Sie dieses Bild beibehalten möchten, lassen Sie das Feld &quot;Bild&quot; einfach leer.</target>
+			</trans-unit>
+			<trans-unit id="no_allowed_to_update" xml:space="preserve" approved="yes">
+				<source>You are not allowed to update that smallad.</source>
+				<target>Sie dürfen diese Kleinanzeige nicht aktualisieren.</target>
+			</trans-unit>
+			<trans-unit id="visible_until" xml:space="preserve" approved="yes">
+				<source>visible until: </source>
+				<target>Sichtbar bis: </target>
+			</trans-unit>
+			<trans-unit id="maxchars_begin" xml:space="preserve" approved="yes">
+				<source>You have </source>
+				<target>Sie haben noch </target>
+			</trans-unit>
+			<trans-unit id="maxchars_end" xml:space="preserve" approved="yes">
+				<source> characters left.</source>
+				<target> Zeichen übrig.</target>
+			</trans-unit>
+			<trans-unit id="phone_or_email_has_to_be_filled_out" xml:space="preserve" approved="yes">
+				<source>Please fill out phone or email.</source>
+				<target>Bitte geben Sie entweder Ihre Telefonnummer oder Ihre E-Mail-Adresse an.</target>
+			</trans-unit>
+			<trans-unit id="email_address_not_valid" xml:space="preserve" approved="yes">
+				<source>The email address is not valid.</source>
+				<target>Die E-Mail-Adresse ist ungültig.</target>
+			</trans-unit>
+			<trans-unit id="back" xml:space="preserve" approved="yes">
+				<source>Back</source>
+				<target>Zurück</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
