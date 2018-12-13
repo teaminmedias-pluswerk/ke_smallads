@@ -14,7 +14,7 @@ $EM_CONF[$_EXTKEY] = array (
 	'title' => 'Smallads',
 	'description' => 'Submit, display and admin smallads (Classified advertisements, Announcements). FE Users can edit and delete ads they have submitted. Picture upload is possible. Easy to install.',
 	'category' => 'plugin',
-	'version' => '1.3.4',
+	'version' => '1.4.0',
 	'state' => 'stable',
 	'uploadfolder' => false,
 	'createDirs' => '',
@@ -28,6 +28,7 @@ $EM_CONF[$_EXTKEY] = array (
 		array (
 			'php' => '5.5.0-0.0.0',
 			'typo3' => '6.2.0-8.99.99',
+            'tslib_fetce' => '0.4.0-0.9.0',
 		),
 		'conflicts' => 
 		array (
