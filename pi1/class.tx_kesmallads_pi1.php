@@ -32,6 +32,8 @@ use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Core\Utility\MathUtility;
 use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
 
+use JambageCom\Div2007\Database\CoreQuery;
+
 
 class tx_kesmallads_pi1 extends \TYPO3\CMS\Frontend\Plugin\AbstractPlugin {
     public $prefixId = 'tx_kesmallads_pi1';						// Same as class name
@@ -69,13 +71,13 @@ class tx_kesmallads_pi1 extends \TYPO3\CMS\Frontend\Plugin\AbstractPlugin {
         $this->pi_loadLL();				// Loading the LOCAL_LANG values
         $this->pi_USER_INT_obj = 1;		// Configuring so caching is not expected. This value means that no cHash params are ever set. We do this, because it's a USER_INT object!
 
-        // get the flexform "mode-selector" as configured in the backend
+        // get the flexform 'mode-selector' as configured in the backend
         $this->mode_selector = intval($this->pi_getFFvalue($this->cObj->data['pi_flexform'],  'mode_selector'));
 
         // get the uid of the target page (->redirect), if not set, use the current page
         $this->target_id = intval($this->pi_getFFvalue($this->cObj->data['pi_flexform'], 'target_id')) ? intval($this->pi_getFFvalue($this->cObj->data['pi_flexform'], 'target_id')) : $GLOBALS['TSFE']->id;
 
-        // get the "no search results" text
+        // get the 'no search results' text
         $this->no_results_text=$this->pi_getFFvalue($this->cObj->data['pi_flexform'], 'no_results_text') ? $this->pi_getFFvalue($this->cObj->data['pi_flexform'], 'no_results_text') : 'No results.';
 
         // check, if the static template is included. If not, stop and display an error message
@@ -146,7 +148,6 @@ class tx_kesmallads_pi1 extends \TYPO3\CMS\Frontend\Plugin\AbstractPlugin {
                 $content .= $this->pi_wrapInBaseClass($this->listView());
             break;
         }
-
         return $content;
     }/*}}}*/
 
@@ -252,15 +253,15 @@ class tx_kesmallads_pi1 extends \TYPO3\CMS\Frontend\Plugin\AbstractPlugin {
                     @unlink($this->uploadFolder . $updateRecord['image']);
                 }
             }
-            $content.=$upload[2];
+            $content .= $upload[2];
         }
 
         // Do the inserting / updating
         $fieldList='cat,cat2,cat3,content,user,image,phone,email,displayemail,title,reviewed,hidden,fe_user_uid,endtime,iscommercial';
         if (!is_array($updateRecord)) {
-            $result = $this->cObj->DBgetInsert($this->table, $this->conf['pidList'] , $insertFields, $fieldList, 1);
+            $result = CoreQuery::DBgetInsert($this->table, $this->conf['pidList'] , $insertFields, $fieldList, 1);
         } else {
-            $result = $this->cObj->DBgetUpdate($this->table, $updateRecord['uid'] , $insertFields, $fieldList, 1);
+            $result = CoreQuery::DBgetUpdate($this->table, $updateRecord['uid'] , $insertFields, $fieldList, 1);
         }
 
         // Compile Userinfo for notify emails
@@ -292,7 +293,7 @@ class tx_kesmallads_pi1 extends \TYPO3\CMS\Frontend\Plugin\AbstractPlugin {
                 $emaildata = $this->conf['notifyEmailEditorOnUpdate.'];
             }
             if ($emaildata) {
-                $emaildata['body'] = str_replace("|", "\n", $emaildata['body']);
+                $emaildata['body'] = str_replace('|', "\n", $emaildata['body']);
                 GeneralUtility::plainMailEncoded($emaildata['toEmail'],
                         $emaildata['subject'],
                         sprintf($emaildata['body'], $GLOBALS['TSFE']->page['title'] . ', ' .  $insertFields['cat'] . "\n", html_entity_decode($insertFields['title']) .  "\n", html_entity_decode($insertFields['content']) . "\n" . $fe_userinfo), 
@@ -309,7 +310,7 @@ class tx_kesmallads_pi1 extends \TYPO3\CMS\Frontend\Plugin\AbstractPlugin {
                 $emaildata = $this->conf['notifyEmailUserOnUpdate.'];
             }
             if ($emaildata && !empty($insertFields['email'])) {
-                $emaildata['body'] = str_replace("|", "\n", $emaildata['body']);
+                $emaildata['body'] = str_replace('|', "\n", $emaildata['body']);
                 GeneralUtility::plainMailEncoded($insertFields['email'],
                         $emaildata['subject'], 
                         sprintf($emaildata['body'], $GLOBALS['TSFE']->page['title'] . ', ' . $insertFields['cat'] . "\n", html_entity_decode($insertFields['title']) . "\n", html_entity_decode($insertFields['content']) . "\n"),
@@ -327,7 +328,7 @@ class tx_kesmallads_pi1 extends \TYPO3\CMS\Frontend\Plugin\AbstractPlugin {
                     $rowArray = $GLOBALS['TYPO3_DB']->exec_SELECTgetRows('uid,email', 'fe_users', $where_clause);
                     if (is_array($rowArray))	{
                         foreach ($rowArray as $row)	{
-                            $emaildata['body'] = str_replace("|", "\n", $emaildata['body']);
+                            $emaildata['body'] = str_replace('|', "\n", $emaildata['body']);
                             GeneralUtility::plainMailEncoded(
                                 $row['email'],
                                 $emaildata['subject'],
@@ -361,7 +362,7 @@ class tx_kesmallads_pi1 extends \TYPO3\CMS\Frontend\Plugin\AbstractPlugin {
 
     /**
     * handle the upload of the image
-    * partly based on extension "fileupload" by Mads Brunn (brunn@mail.dk)
+    * partly based on extension 'fileupload' by Mads Brunn (brunn@mail.dk)
     */
     public function handleUpload() 
     {/*{{{*/
@@ -428,16 +429,16 @@ class tx_kesmallads_pi1 extends \TYPO3\CMS\Frontend\Plugin\AbstractPlugin {
     public function mimeAllowed($mime)
     {/*{{{*/
         if(!($this->conf['checkMime'])) return TRUE; 		//all mimetypes allowed
-        $includelist = explode(",", $this->conf['mimeInclude']);
-        $excludelist = explode(",", $this->conf['mimeExclude']);		//overrides includelist
+        $includelist = explode(',', $this->conf['mimeInclude']);
+        $excludelist = explode(',', $this->conf['mimeExclude']);		//overrides includelist
         return (   (in_array($mime, $includelist) || in_array('*', $includelist))   &&   (!in_array($mime, $excludelist))  );
     }/*}}}*/
 
     public function extAllowed($filename)
     {/*{{{*/
         if(!($this->conf['checkExt'])) return TRUE;			//all extensions allowed
-        $includelist = explode(",", $this->conf['extInclude']);
-        $excludelist = explode(",", $this->conf['extExclude']) 	;	//overrides includelist
+        $includelist = explode(',', $this->conf['extInclude']);
+        $excludelist = explode(',', $this->conf['extExclude']) 	;	//overrides includelist
         $extension = '';
         if($extension=strstr($filename, '.')){
             $extension=strtolower(substr($extension, 1));
@@ -469,7 +470,7 @@ class tx_kesmallads_pi1 extends \TYPO3\CMS\Frontend\Plugin\AbstractPlugin {
             if ($GLOBALS['TSFE']->fe_user->user['uid'] != $record['fe_user_uid']) return '<div class="error_not_allowed">' . $this->pi_getLL('not_your_smallad_delete') . '</div>';
 
             // everything is OK, so delete the smallad (in fact, only set the "deleted" flag)
-            $result = $this->cObj->DBgetDelete($this->table, $record['uid'], 1);
+            $result = CoreQuery::DBgetDelete($this->table, $record['uid'], 1);
 
             if ($result) {
                 $content .= '<div class="success">' . $this->pi_getLL('success_delete') . '</div>';
@@ -504,7 +505,7 @@ class tx_kesmallads_pi1 extends \TYPO3\CMS\Frontend\Plugin\AbstractPlugin {
                 $content .= $this->listView(1);
             }
         } else {
-            $content .= '<div class="error_not_allowed">'.$this->pi_getLL('no_user_logged_in').'</div>';
+            $content .= '<div class="error_not_allowed">' . $this->pi_getLL('no_user_logged_in') . '</div>';
         }
 
         return $content;
@@ -686,7 +687,7 @@ class tx_kesmallads_pi1 extends \TYPO3\CMS\Frontend\Plugin\AbstractPlugin {
                 // render the subcategories from the list for this category
                 $counter2 = 0;
                 foreach ($cat3_configlist as $key => $cat3_config) {
-                    // use only the rows with the configuration (the ones with the "." in the key)
+                    // use only the rows with the configuration (the ones with the '.' in the key)
                     if ((strstr($key, '.')) && $cat3_config['belongsTo'] == $cat2_config['value']) {
                         if ($counter2 > 0) {
                             $content .= ',';
@@ -704,7 +705,7 @@ class tx_kesmallads_pi1 extends \TYPO3\CMS\Frontend\Plugin\AbstractPlugin {
             // the main function
             $content .= 'function renderSubCat() {' . "\n";
 
-            // empty the select box "third category"
+            // empty the select box 'third category'
             $content .= 'document.' . $this->formName . '.cat3.options.length=0;' . "\n";
 
             // repopulate the select box
@@ -758,6 +759,16 @@ for (i=0; i<subCategoryList[selectedcat].length; i++) {
         return $content;
     }/*}}}*/
 
+    protected function addContentFromRow($row) {
+        $content = '';
+        $content .= '<div' . $this->pi_classParam('teaser_row') . '>';
+        $content .= '<span' . $this->pi_classParam('teaser_cat') . '>' . htmlspecialchars($row['cat']) . ':</span> ';
+        $content .= '<span' . $this->pi_classParam('teaser_title') . '>' . htmlspecialchars($row['title']) . '</span>';
+        $content .= '</div>';
+        
+        return $content;
+    }
+
     /**
     * listViewTeaser shows the only a few titles of the newest smallads and a link to the smallads main page
     */
@@ -772,14 +783,14 @@ for (i=0; i<subCategoryList[selectedcat].length; i++) {
         $lConf = $this->conf['teaserView.'];
 
 
-        // enable backward compatibility for "teaserNum"
+        // enable backward compatibility for 'teaserNum'
         if (!empty($this->conf['teaserNum']) && empty($lConf['results_at_a_time'])) $lConf['results_at_a_time'] = $this->conf['teaserNum'];
 
         // Number of results to show in a listing.
         $this->internal['results_at_a_time'] = MathUtility::forceIntegerInRange($lConf['results_at_a_time'], 0, 10000);
         if (!$this->internal['results_at_a_time']) $this->internal['results_at_a_time'] = 3;
 
-        // The maximum number of "pages" in the browse-box: "Page 1", "Page 2", etc.
+        // The maximum number of 'pages' in the browse-box: 'Page 1', 'Page 2', etc.
         $this->internal['maxPages'] = MathUtility::forceIntegerInRange($lConf['maxPages'], 0, 10000);
         if (!$this->internal['maxPages']) $this->internal['maxPages'] = 5;
 
@@ -792,11 +803,14 @@ for (i=0; i<subCategoryList[selectedcat].length; i++) {
         $res = $this->pi_exec_query($this->table, 0, $addWhere);
 
         // create the output content
-        while($row = $res->fetch(\PDO::FETCH_ASSOC)) {
-            $content .= '<div' . $this->pi_classParam('teaser_row') . '>';
-            $content .= '<span' . $this->pi_classParam('teaser_cat') . '>' . htmlspecialchars($row['cat']) . ':</span> ';
-            $content .= '<span' . $this->pi_classParam('teaser_title') . '>' . htmlspecialchars($row['title']) . '</span>';
-            $content .= '</div>';
+        if ($res instanceof \Doctrine\DBAL\Driver\Mysqli\MysqliStatement) {
+            while($row = $res->fetch(\PDO::FETCH_ASSOC)) {
+                $content .= $this->addContentFromRow($row);
+            }
+        } else {
+            while($row = $GLOBALS['TYPO3_DB']->sql_fetch_assoc($res)) {
+                $content .= $this->addContentFromRow($row);
+            }
         }
 
         // ad a link to the smallads main page
@@ -823,7 +837,6 @@ for (i=0; i<subCategoryList[selectedcat].length; i++) {
 
         // Local settings for the listView function
         $lConf = $this->conf['listView.'];
-
         // make a local instance of tslib_cObj
         $lcObj = GeneralUtility::makeInstance(ContentObjectRenderer::class);
 
@@ -855,7 +868,7 @@ for (i=0; i<subCategoryList[selectedcat].length; i++) {
         }
 
         // Add some WHERE conditons to the database query ...
-        $db_whereClause = '';
+        $db_whereClause = '1=1';
 
         // Filter the elements according to the mode selector.
         // Transform integer value of the mode to the cleartext category value
@@ -876,20 +889,23 @@ for (i=0; i<subCategoryList[selectedcat].length; i++) {
             $db_whereClause .= $this->checkboxModeSelectorFilter();
         }
 
-        // Find only smallads of this FE User if the "edit"-mode is selected
+        // Find only smallads of this FE User if the 'edit'-mode is selected
         if ($edit) {
-            $db_whereClause .= ' AND fe_user_uid='.$GLOBALS['TSFE']->fe_user->user['uid'];
+            $db_whereClause .= ' AND fe_user_uid=' . $GLOBALS['TSFE']->fe_user->user['uid'];
         }
 
+        // show only the valid records
+        $db_whereClause .= $lcObj->enableFields($this->table);
+
         // Initializing the query parameters
-        $this->internal['orderBy'] 				= $this->conf['listOrder'];
-        $this->internal['descFlag'] 			= $this->conf['listOrderDescFlag'];
-        $this->internal['orderByList'] 			= $this->conf['listOrder'];
+        $this->internal['orderBy']              = $this->conf['listOrder'];
+        $this->internal['descFlag']             = $this->conf['listOrderDescFlag'];
+        $this->internal['orderByList']          = $this->conf['listOrder'];
         $this->internal['results_at_a_time'] = MathUtility::forceIntegerInRange($lConf['results_at_a_time'], 0, 10000);
         if (!$this->internal['results_at_a_time']) $this->internal['results_at_a_time'] = 2;
         $this->internal['maxPages'] = MathUtility::forceIntegerInRange($lConf['maxPages'], 0, 10000);
         if (!$this->internal['maxPages']) $this->internal['maxPages'] = 2;
-        $this->internal['searchFieldList']		= 'content,phone,email,title,cat';
+        $this->internal['searchFieldList']       = 'content,phone,email,title,cat';
 
         // Get number of Smallads
         $this->internal['res_count'] = $GLOBALS['TYPO3_DB']->exec_SELECTcountRows('*', $this->table, $db_whereClause);
@@ -933,7 +949,6 @@ for (i=0; i<subCategoryList[selectedcat].length; i++) {
 
         // End the form for the searchbox and the mode selector
         $fullTable .= '</form>';
-
         // Print message if no results found
         if (!$this->internal['res_count']) {
             $fullTable .= '<div'.$this->pi_classParam('searchresult-noresult') . '>' . $this->no_results_text . '</div>';
@@ -1058,9 +1073,17 @@ for (i=0; i<subCategoryList[selectedcat].length; i++) {
         // and compile a comma separated list
         $res = $GLOBALS['TYPO3_DB']->exec_SELECTquery('*', $this->table, 'pid IN (' . $this->conf['pidList'] . ')' . $lcObj->enableFields($this->table));
         $cat1_list = '';
-        while ($row = $res->fetch(\PDO::FETCH_ASSOC)) {
-            if ($row['cat']) {
-                $cat1_list .= $row['cat'] . ',';
+        if ($res instanceof \Doctrine\DBAL\Driver\Mysqli\MysqliStatement) {
+            while ($row = $res->fetch(\PDO::FETCH_ASSOC)) {
+                if ($row['cat']) {
+                    $cat1_list .= $row['cat'] . ',';
+                }
+            }
+        } else {
+            while ($row = $GLOBALS['TYPO3_DB']->sql_fetch_assoc($res)) {
+                if ($row['cat']) {
+                    $cat1_list .= $row['cat'] . ',';
+                }
             }
         }
         $cat1_list = GeneralUtility::uniqueList($cat1_list);
@@ -1069,9 +1092,17 @@ for (i=0; i<subCategoryList[selectedcat].length; i++) {
         // already selected first one
         $cat2_list = '';
         $res = $GLOBALS['TYPO3_DB']->exec_SELECTquery('*', $this->table, 'pid IN (' . $this->conf['pidList'] . ')' . $this->dropdownModeSelectorFilter('modeselector_cat') . $lcObj->enableFields($this->table));
-        while ($row = $res->fetch(\PDO::FETCH_ASSOC)) {
-            if ($row['cat2']) {
-                $cat2_list .= $row['cat2'] . ',';
+        if ($res instanceof \Doctrine\DBAL\Driver\Mysqli\MysqliStatement) {
+            while ($row = $res->fetch(\PDO::FETCH_ASSOC)) {
+                if ($row['cat2']) {
+                    $cat2_list .= $row['cat2'] . ',';
+                }
+            }
+        } else {
+            while ($row = $GLOBALS['TYPO3_DB']->sql_fetch_assoc($res)) {
+                if ($row['cat2']) {
+                    $cat2_list .= $row['cat2'] . ',';
+                }
             }
         }
         $cat2_list = GeneralUtility::uniqueList($cat2_list);
@@ -1080,7 +1111,7 @@ for (i=0; i<subCategoryList[selectedcat].length; i++) {
         // already selected second one
         $cat3_list = '';
         $res = $GLOBALS['TYPO3_DB']->exec_SELECTquery('*', $this->table, 'pid IN (' . $this->conf['pidList'] . ')' . $this->dropdownModeSelectorFilter('modeselector_cat2') . $lcObj->enableFields($this->table));
-        while ($row = $res->fetch(\PDO::FETCH_ASSOC)) {
+        while ($row = $GLOBALS['TYPO3_DB']->sql_fetch_assoc($res)) {
             if ($row['cat3']) {
                 $cat3_list .= $row['cat3'] . ',';
             }
@@ -1148,7 +1179,7 @@ for (i=0; i<subCategoryList[selectedcat].length; i++) {
             'pid IN (' . $this->conf['pidList'] . ')' . $lcObj->enableFields($this->table)
         );
         $cat1_list = '';
-        while ($row = $res->fetch(\PDO::FETCH_ASSOC)) {
+        while ($row = $GLOBALS['TYPO3_DB']->sql_fetch_assoc($res)) {
             if ($row['cat']) {
                 $cat1_list .= $row['cat'] . ',';
             }
@@ -1162,7 +1193,7 @@ for (i=0; i<subCategoryList[selectedcat].length; i++) {
             $this->table,
             'pid IN (' . $this->conf['pidList'] . ')' . $lcObj->enableFields($this->table)
         );
-        while ($row = $res->fetch(\PDO::FETCH_ASSOC)) {
+        while ($row = $GLOBALS['TYPO3_DB']->sql_fetch_assoc($res)) {
             if ($row['cat2']) {
                 $cat2_list .= $row['cat2'] . ',';
             }
@@ -1176,7 +1207,7 @@ for (i=0; i<subCategoryList[selectedcat].length; i++) {
             $this->table,
             'pid IN (' . $this->conf['pidList'] . ')' . $lcObj->enableFields($this->table)
         );
-        while ($row = $res->fetch(\PDO::FETCH_ASSOC)) {
+        while ($row = $GLOBALS['TYPO3_DB']->sql_fetch_assoc($res)) {
             if ($row['cat3']) {
                 $cat3_list .= $row['cat3'] . ',';
             }
@@ -1297,9 +1328,16 @@ for (i=0; i<subCategoryList[selectedcat].length; i++) {
 
             // Make list table rows
         $c = 0;
-        while($this->internal['currentRow'] = $res->fetch(\PDO::FETCH_ASSOC)) {
-            $tRows[] = $this->pi_list_row($c, $edit);
-            $c++;
+        if ($res instanceof \Doctrine\DBAL\Driver\Mysqli\MysqliStatement) {
+            while($this->internal['currentRow'] = $res->fetch(\PDO::FETCH_ASSOC)) {
+                $tRows[] = $this->pi_list_row($c, $edit);
+                $c++;
+            }
+        } else {
+            while($this->internal['currentRow'] = $GLOBALS['TYPO3_DB']->sql_fetch_assoc($res)) {
+                $tRows[] = $this->pi_list_row($c, $edit);
+                $c++;
+            }
         }
 
         $out = '<div' . $this->pi_classParam('listrow') . '>' . implode('', $tRows) . '</div>';
@@ -1383,12 +1421,12 @@ for (i=0; i<subCategoryList[selectedcat].length; i++) {
                 $this->conf['smalladcontent.email.']['stdWrap.']['typolink.']['parameter'] = $this->internal['currentRow']['email'];
                 return $lcObj->cObjGetSingle('TEXT', $this->conf['smalladcontent.email.']);
             break;
-            case "content":
+            case 'content':
                 //return str_replace("\n",'<br />',$this->internal['currentRow'][$fN]);
                 return $this->pi_RTEcssText($this->internal['currentRow'][$fN]);
             break;
-            case "endtime":
-            case "crdate":
+            case 'endtime':
+            case 'crdate':
                 return date($this->conf['submitDateFormat'], $this->internal['currentRow'][$fN]);
             break;
             default:
@@ -1404,7 +1442,7 @@ for (i=0; i<subCategoryList[selectedcat].length; i++) {
     * $catkey: Key of a category like stored in the Typoscript Setup
     * cat values and labels are found in
     * smalladForm.dataArray.10.valueArray.
-    * check which TS-Index this "cat"-key has and return the matching label
+    * check which TS-Index this 'cat'-key has and return the matching label
     *
     * @param mixed $string
     * @param array $valueArray
