@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" target-language="nl" datatype="plaintext" original="messages" date="2018-12-12T08:41:52Z" product-name="ke_smallads">
+		<header/>
+		<body>
+			<trans-unit id="mlang_tabs_tab" xml:space="preserve" approved="yes">
+				<source>Smallads</source>
+				<target>Advertenties</target>
+			</trans-unit>
+			<trans-unit id="mlang_labels_tabdescr" xml:space="preserve" approved="yes">
+				<source>Here you can unhide all new Smallads or export Smallads to a file.</source>
+				<target>Hier kan je alle nieuwe advertenties in een keer vrijgeven en advertenties exporteren.</target>
+			</trans-unit>
+			<trans-unit id="mlang_labels_tablabel" xml:space="preserve" approved="yes">
+				<source>Admin Smallads</source>
+				<target>Advertenties beheren</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

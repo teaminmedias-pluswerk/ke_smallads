@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" target-language="fr" datatype="plaintext" original="messages" date="2018-12-12T08:41:47Z" product-name="ke_smallads">
+		<header/>
+		<body>
+			<trans-unit id="title" xml:space="preserve" approved="yes">
+				<source>Smallads</source>
+				<target>Smallads</target>
+			</trans-unit>
+			<trans-unit id="exportReviewed" xml:space="preserve" approved="yes">
+				<source>Export reviewed</source>
+				<target>Export</target>
+			</trans-unit>
+			<trans-unit id="exportReviewedUserdata" xml:space="preserve" approved="yes">
+				<source>Export reviewed with Userdata</source>
+				<target>Exporter avec données utilisateur</target>
+			</trans-unit>
+			<trans-unit id="delete" xml:space="preserve" approved="yes">
+				<source>Delete</source>
+				<target>Supprimer</target>
+			</trans-unit>
+			<trans-unit id="unHideReviewed" xml:space="preserve" approved="yes">
+				<source>Unhide</source>
+				<target>Rendre visible</target>
+			</trans-unit>
+			<trans-unit id="explanation" xml:space="preserve" approved="yes">
+				<source>Here you can unhide all new Smallads or export Smallads. Please use the &quot;List&quot; module if you want to edit the smallads.</source>
+				<target>Rendre toutes les annonces visibles ou exporter les annonces.</target>
+			</trans-unit>
+			<trans-unit id="exportReviewed_explanation" xml:space="preserve" approved="yes">
+				<source>Here you can export all Smallads of the current page which have been reviewed, but which are not visible.</source>
+				<target>Ici vous pouvez trouver toutes les annonces de la page courante qui ont été visées mais qui ne sont pas encore visibles au public.</target>
+			</trans-unit>
+			<trans-unit id="exportReviewedUserdata_title" xml:space="preserve" approved="yes">
+				<source>Export rev. Smallads with Userdata</source>
+				<target>Exporter les annonces avec les données utilisateur</target>
+			</trans-unit>
+			<trans-unit id="exportReviewedUserdata_explanation" xml:space="preserve" approved="yes">
+				<source>Here you can find all Smallads of the current page which have been reviewed, but which are not visible, and the connected Userdata.</source>
+				<target>Ici vous pouvez trouver toutes les annonces de la pages courante qui ont déjà été visées mais qui ne sont pas encore visibles au public (avec les données utilisateur).</target>
+			</trans-unit>
+			<trans-unit id="exportReviewed_title" xml:space="preserve" approved="yes">
+				<source>Export reviewed smallads</source>
+				<target>Exporter les annonces visées</target>
+			</trans-unit>
+			<trans-unit id="phone" xml:space="preserve" approved="yes">
+				<source> Phone: </source>
+				<target> Téléphone: </target>
+			</trans-unit>
+			<trans-unit id="email" xml:space="preserve" approved="yes">
+				<source>email: </source>
+				<target>email: </target>
+			</trans-unit>
+			<trans-unit id="delete_explanation" xml:space="preserve" approved="yes">
+				<source>Here you can DELETE all the smallads which are NOT HIDDEN.</source>
+				<target>Ici vous pouvez SUPPRIMER toutes les annonces qui NE SONT PAS MASQUEES.</target>
+			</trans-unit>
+			<trans-unit id="delete_title" xml:space="preserve" approved="yes">
+				<source>Delete unhidden Smallads</source>
+				<target>Supprimer les annonces visibles</target>
+			</trans-unit>
+			<trans-unit id="unHideReviewed_explanation" xml:space="preserve" approved="yes">
+				<source>Here you can unhide all reviewed Smallads at once.</source>
+				<target>Ici vous pouvez rendre visible toutes les annonces visées en une seule fois.</target>
+			</trans-unit>
+			<trans-unit id="unHideReviewed_title" xml:space="preserve" approved="yes">
+				<source>Unhide reviewed Smallads</source>
+				<target>Rendre visible toutes les annonces visées</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

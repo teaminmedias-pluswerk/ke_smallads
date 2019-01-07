@@ -1,5 +1,11 @@
 
+
 Version 1.3.4 (2018/12)
+* workaround for TYPO3 8.7: Add a condition when the class \Doctrine\DBAL\Driver\Mysqli\MysqliStatement is used instead of mysqli_result for the variable $res.
+  use $res->fetch(\PDO::FETCH_ASSOC) instead of $GLOBALS["TYPO3_DB"]->sql_fetch_assoc($res)
+* task: move the files setup.txt and editorcfg.txt into Configuration/TypoScript/PluginSetup/
+* task: transform the locallang xml files into locallang xlf files
+* task: restructuring of PHP code for TYPO3 8
 * feature: make user field visible (village)
 
 Version 1.3.3

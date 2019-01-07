@@ -10,5 +10,5 @@ $MCONF["access"]="user,group";
 $MCONF["script"]="index.php";
 
 $MLANG["default"]["tabs_images"]["tab"] = "moduleicon.gif";
-$MLANG["default"]["ll_ref"]="LLL:EXT:ke_smallads/mod1/locallang_mod.php";
+$MLANG["default"]["ll_ref"]="LLL:EXT:ke_smallads/mod1/locallang_mod.xlf";
 ?>

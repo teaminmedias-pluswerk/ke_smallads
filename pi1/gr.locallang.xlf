@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" target-language="gr" datatype="plaintext" original="messages" date="2018-12-12T08:35:18Z" product-name="ke_smallads">
+		<header/>
+		<body>
+			<trans-unit id="fileupload.error.nodir" xml:space="preserve" approved="yes">
+				<source>Error while uploading the image: Image upload directory does not exist.</source>
+				<target>&amp;#931;&amp;#966;&amp;#940;&amp;#955;&amp;#956;&amp;#945; &amp;#954;&amp;#945;&amp;#964;&amp;#940; &amp;#964;&amp;#951; &amp;#956;&amp;#949;&amp;#964;&amp;#945;&amp;#966;&amp;#972;&amp;#961;&amp;#964;&amp;#969;&amp;#963;&amp;#951; &amp;#964;&amp;#951;&amp;#962; &amp;#949;&amp;#953;&amp;#954;&amp;#972;&amp;#957;&amp;#945;&amp;#962;: &amp;#959; &amp;#966;&amp;#940;&amp;#954;&amp;#949;&amp;#955;&amp;#959;&amp;#962; &amp;#956;&amp;#949;&amp;#964;&amp;#945;&amp;#966;&amp;#972;&amp;#961;&amp;#964;&amp;#969;&amp;#963;&amp;#951;&amp;#962; &amp;#948;&amp;#949;&amp;#957; &amp;#965;&amp;#960;&amp;#940;&amp;#961;&amp;#967;&amp;#949;&amp;#953;.</target>
+			</trans-unit>
+			<trans-unit id="fileupload.error.toobig" xml:space="preserve" approved="yes">
+				<source>Error while uploading the image: Image size is too big.</source>
+				<target>&amp;#931;&amp;#966;&amp;#940;&amp;#955;&amp;#956;&amp;#945; &amp;#954;&amp;#945;&amp;#964;&amp;#940; &amp;#964;&amp;#951; &amp;#956;&amp;#949;&amp;#964;&amp;#945;&amp;#966;&amp;#972;&amp;#961;&amp;#964;&amp;#969;&amp;#963;&amp;#951; &amp;#964;&amp;#951;&amp;#962; &amp;#949;&amp;#953;&amp;#954;&amp;#972;&amp;#957;&amp;#945;&amp;#962;: &amp;#964;&amp;#959; &amp;#956;&amp;#941;&amp;#947;&amp;#949;&amp;#952;&amp;#959;&amp;#962; &amp;#964;&amp;#959;&amp;#965; &amp;#945;&amp;#961;&amp;#967;&amp;#949;&amp;#943;&amp;#959;&amp;#965; &amp;#949;&amp;#943;&amp;#957;&amp;#945;&amp;#953; &amp;#960;&amp;#959;&amp;#955;&amp;#973; &amp;#956;&amp;#949;&amp;#947;&amp;#940;&amp;#955;&amp;#959;.</target>
+			</trans-unit>
+			<trans-unit id="fileupload.error.mimenotallowed" xml:space="preserve" approved="yes">
+				<source>Error while uploading the image: File not allowed.</source>
+				<target>&amp;#931;&amp;#966;&amp;#940;&amp;#955;&amp;#956;&amp;#945; &amp;#954;&amp;#945;&amp;#964;&amp;#940; &amp;#964;&amp;#951; &amp;#956;&amp;#949;&amp;#964;&amp;#945;&amp;#966;&amp;#972;&amp;#961;&amp;#964;&amp;#969;&amp;#963;&amp;#951; &amp;#964;&amp;#951;&amp;#962; &amp;#949;&amp;#953;&amp;#954;&amp;#972;&amp;#957;&amp;#945;&amp;#962;: &amp;#956;&amp;#951; &amp;#949;&amp;#960;&amp;#953;&amp;#964;&amp;#961;&amp;#949;&amp;#960;&amp;#964;&amp;#972; &amp;#945;&amp;#961;&amp;#967;&amp;#949;&amp;#943;&amp;#959;.</target>
+			</trans-unit>
+			<trans-unit id="fileupload.error.extensionnotallowed" xml:space="preserve" approved="yes">
+				<source>Error while uploading the image: File Extension not allowed.</source>
+				<target>&amp;#931;&amp;#966;&amp;#940;&amp;#955;&amp;#956;&amp;#945; &amp;#954;&amp;#945;&amp;#964;&amp;#940; &amp;#964;&amp;#951; &amp;#956;&amp;#949;&amp;#964;&amp;#945;&amp;#966;&amp;#972;&amp;#961;&amp;#964;&amp;#969;&amp;#963;&amp;#951; &amp;#964;&amp;#951;&amp;#962; &amp;#949;&amp;#953;&amp;#954;&amp;#972;&amp;#957;&amp;#945;&amp;#962;: &amp;#956;&amp;#951; &amp;#949;&amp;#960;&amp;#953;&amp;#964;&amp;#961;&amp;#949;&amp;#960;&amp;#964;&amp;#942; &amp;#954;&amp;#945;&amp;#964;&amp;#940;&amp;#955;&amp;#951;&amp;#958;&amp;#951; &amp;#945;&amp;#961;&amp;#967;&amp;#949;&amp;#943;&amp;#959;&amp;#965;.</target>
+			</trans-unit>
+			<trans-unit id="fileupload.uploadsuccesfull" xml:space="preserve" approved="yes">
+				<source>Imagefile uploaded successfully.</source>
+				<target>&amp;#917;&amp;#960;&amp;#953;&amp;#964;&amp;#965;&amp;#967;&amp;#942;&amp;#962; &amp;#956;&amp;#949;&amp;#964;&amp;#945;&amp;#966;&amp;#972;&amp;#961;&amp;#964;&amp;#969;&amp;#963;&amp;#951; &amp;#945;&amp;#961;&amp;#967;&amp;#949;&amp;#943;&amp;#959;&amp;#965; &amp;#949;&amp;#953;&amp;#954;&amp;#972;&amp;#957;&amp;#945;&amp;#962;.</target>
+			</trans-unit>
+			<trans-unit id="list_mode_1" xml:space="preserve" approved="yes">
+				<source>All</source>
+				<target>&amp;#908;&amp;#955;&amp;#945;</target>
+			</trans-unit>
+			<trans-unit id="back" xml:space="preserve" approved="yes">
+				<source>Back</source>
+				<target>&amp;#928;&amp;#943;&amp;#963;&amp;#969;</target>
+			</trans-unit>
+			<trans-unit id="pi_list_browseresults_prev" xml:space="preserve" approved="yes">
+				<source>&lt; Previous</source>
+				<target>&lt; &amp;#928;&amp;#961;&amp;#959;&amp;#951;&amp;#947;&amp;#959;&amp;#973;&amp;#956;&amp;#949;&amp;#957;&amp;#951;</target>
+			</trans-unit>
+			<trans-unit id="pi_list_browseresults_page" xml:space="preserve" approved="yes">
+				<source>Page</source>
+				<target>&amp;#931;&amp;#949;&amp;#955;&amp;#943;&amp;#948;&amp;#945;</target>
+			</trans-unit>
+			<trans-unit id="pi_list_browseresults_next" xml:space="preserve" approved="yes">
+				<source>Next &gt;</source>
+				<target>&amp;#917;&amp;#960;&amp;#972;&amp;#956;&amp;#949;&amp;#957;&amp;#951; &gt;</target>
+			</trans-unit>
+			<trans-unit id="pi_list_browseresults_displays" xml:space="preserve" approved="yes">
+				<source>Displaying results ###SPAN_BEGIN###%s to %s&lt;/span&gt; out of ###SPAN_BEGIN###%s&lt;/span&gt;</source>
+				<target>&amp;#917;&amp;#956;&amp;#966;&amp;#940;&amp;#957;&amp;#953;&amp;#963;&amp;#951; &amp;#945;&amp;#960;&amp;#959;&amp;#964;&amp;#949;&amp;#955;&amp;#949;&amp;#963;&amp;#956;&amp;#940;&amp;#964;&amp;#969;&amp;#957; ###SPAN_BEGIN###%s &amp;#941;&amp;#969;&amp;#962; %s&lt;/span&gt; &amp;#945;&amp;#960;&amp;#972; ###SPAN_BEGIN###%s&lt;/span&gt;</target>
+			</trans-unit>
+			<trans-unit id="pi_list_searchBox_search" xml:space="preserve" approved="yes">
+				<source>Search</source>
+				<target>&amp;#913;&amp;#957;&amp;#945;&amp;#950;&amp;#942;&amp;#964;&amp;#951;&amp;#963;&amp;#951;</target>
+			</trans-unit>
+			<trans-unit id="tx_kesmallads_smallads.phone" xml:space="preserve" approved="yes">
+				<source>phone</source>
+				<target>&amp;#964;&amp;#951;&amp;#955;&amp;#941;&amp;#966;&amp;#969;&amp;#957;&amp;#959;</target>
+			</trans-unit>
+			<trans-unit id="tx_kesmallads_smallads.email" xml:space="preserve" approved="yes">
+				<source>email</source>
+				<target>email</target>
+			</trans-unit>
+			<trans-unit id="no_user_logged_in" xml:space="preserve" approved="yes">
+				<source>You are not logged in and therefore not allowed to edit any smallads.</source>
+				<target>&amp;#916;&amp;#949;&amp;#957; &amp;#941;&amp;#967;&amp;#949;&amp;#964;&amp;#949; &amp;#954;&amp;#940;&amp;#957;&amp;#949;&amp;#953; login &amp;#954;&amp;#945;&amp;#953; &amp;#948;&amp;#949;&amp;#957; &amp;#949;&amp;#960;&amp;#953;&amp;#964;&amp;#961;&amp;#941;&amp;#960;&amp;#949;&amp;#964;&amp;#945;&amp;#953; &amp;#957;&amp;#945; &amp;#948;&amp;#949;&amp;#943;&amp;#964;&amp;#949; &amp;#956;&amp;#953;&amp;#954;&amp;#961;&amp;#941;&amp;#962; &amp;#945;&amp;#947;&amp;#947;&amp;#949;&amp;#955;&amp;#943;&amp;#949;&amp;#962;.</target>
+			</trans-unit>
+			<trans-unit id="no_user_logged_in_delete" xml:space="preserve" approved="yes">
+				<source>You are not logged in and therefore not allowed to delete any smallads.</source>
+				<target>&amp;#916;&amp;#949;&amp;#957; &amp;#941;&amp;#967;&amp;#949;&amp;#964;&amp;#949; &amp;#954;&amp;#940;&amp;#957;&amp;#949;&amp;#953; login &amp;#954;&amp;#945;&amp;#953; &amp;#948;&amp;#949;&amp;#957; &amp;#956;&amp;#960;&amp;#959;&amp;#961;&amp;#949;&amp;#943;&amp;#964;&amp;#949; &amp;#957;&amp;#945; &amp;#948;&amp;#953;&amp;#945;&amp;#947;&amp;#961;&amp;#940;&amp;#968;&amp;#949;&amp;#964;&amp;#949; &amp;#956;&amp;#953;&amp;#954;&amp;#961;&amp;#941;&amp;#962; &amp;#945;&amp;#947;&amp;#947;&amp;#949;&amp;#955;&amp;#943;&amp;#949;&amp;#962;.</target>
+			</trans-unit>
+			<trans-unit id="not_your_smallad" xml:space="preserve" approved="yes">
+				<source>You are not allowed to edit this smallad.</source>
+				<target>&amp;#916;&amp;#949;&amp;#957; &amp;#949;&amp;#960;&amp;#953;&amp;#964;&amp;#961;&amp;#941;&amp;#960;&amp;#949;&amp;#964;&amp;#945;&amp;#953; &amp;#957;&amp;#945; &amp;#956;&amp;#949;&amp;#964;&amp;#945;&amp;#946;&amp;#940;&amp;#955;&amp;#949;&amp;#964;&amp;#949; &amp;#945;&amp;#965;&amp;#964;&amp;#942; &amp;#964;&amp;#951;&amp;#957; &amp;#945;&amp;#947;&amp;#947;&amp;#949;&amp;#955;&amp;#943;&amp;#945;.</target>
+			</trans-unit>
+			<trans-unit id="not_your_smallad_delete" xml:space="preserve" approved="yes">
+				<source>You are not allowed to delete this smallad.</source>
+				<target>&amp;#916;&amp;#949;&amp;#957; &amp;#949;&amp;#960;&amp;#953;&amp;#964;&amp;#961;&amp;#941;&amp;#960;&amp;#949;&amp;#964;&amp;#945;&amp;#953; &amp;#957;&amp;#945; &amp;#948;&amp;#953;&amp;#945;&amp;#947;&amp;#961;&amp;#940;&amp;#968;&amp;#949;&amp;#964;&amp;#949; &amp;#945;&amp;#965;&amp;#964;&amp;#942; &amp;#964;&amp;#951;&amp;#957; &amp;#945;&amp;#947;&amp;#947;&amp;#949;&amp;#955;&amp;#943;&amp;#945;.</target>
+			</trans-unit>
+			<trans-unit id="success_delete" xml:space="preserve" approved="yes">
+				<source>Your smallad has been deleted.</source>
+				<target>&amp;#919; &amp;#945;&amp;#947;&amp;#947;&amp;#949;&amp;#955;&amp;#943;&amp;#945; &amp;#963;&amp;#945;&amp;#962; &amp;#941;&amp;#967;&amp;#949;&amp;#953; &amp;#948;&amp;#953;&amp;#945;&amp;#947;&amp;#961;&amp;#945;&amp;#966;&amp;#949;&amp;#943;.</target>
+			</trans-unit>
+			<trans-unit id="edit_link" xml:space="preserve" approved="yes">
+				<source>Edit</source>
+				<target>&amp;#924;&amp;#949;&amp;#964;&amp;#945;&amp;#946;&amp;#959;&amp;#955;&amp;#942;</target>
+			</trans-unit>
+			<trans-unit id="delete_link" xml:space="preserve" approved="yes">
+				<source>Delete</source>
+				<target>&amp;#916;&amp;#953;&amp;#945;&amp;#947;&amp;#961;&amp;#945;&amp;#966;&amp;#942;</target>
+			</trans-unit>
+			<trans-unit id="really_delete" xml:space="preserve" approved="yes">
+				<source>Do you really want to delete this entry?</source>
+				<target>&amp;#917;&amp;#943;&amp;#963;&amp;#964;&amp;#949; &amp;#946;&amp;#941;&amp;#946;&amp;#945;&amp;#953;&amp;#959;&amp;#962; &amp;#947;&amp;#953;&amp;#945; &amp;#964;&amp;#951; &amp;#948;&amp;#953;&amp;#945;&amp;#947;&amp;#961;&amp;#945;&amp;#966;&amp;#942; &amp;#945;&amp;#965;&amp;#964;&amp;#942;&amp;#962; &amp;#964;&amp;#951;&amp;#962; &amp;#949;&amp;#947;&amp;#947;&amp;#961;&amp;#945;&amp;#966;&amp;#942;&amp;#962;;</target>
+			</trans-unit>
+			<trans-unit id="edit_image_note" xml:space="preserve" approved="yes">
+				<source>If you want to keep this image, just leave the field &quot;Image&quot; empty.</source>
+				<target>&amp;#913;&amp;#957; &amp;#952;&amp;#941;&amp;#955;&amp;#949;&amp;#964;&amp;#949; &amp;#957;&amp;#945; &amp;#960;&amp;#945;&amp;#961;&amp;#945;&amp;#956;&amp;#949;&amp;#943;&amp;#957;&amp;#949;&amp;#953; &amp;#945;&amp;#965;&amp;#964;&amp;#942; &amp;#951; &amp;#949;&amp;#953;&amp;#954;&amp;#972;&amp;#957;&amp;#945;, &amp;#945;&amp;#966;&amp;#942;&amp;#963;&amp;#964;&amp;#949; &amp;#954;&amp;#949;&amp;#957;&amp;#972; &amp;#964;&amp;#959; &amp;#960;&amp;#949;&amp;#948;&amp;#943;&amp;#959; &quot;Image&quot;.</target>
+			</trans-unit>
+			<trans-unit id="no_allowed_to_update" xml:space="preserve" approved="yes">
+				<source>You are not allowed to update that smallad.</source>
+				<target>&amp;#916;&amp;#949;&amp;#957; &amp;#949;&amp;#960;&amp;#953;&amp;#964;&amp;#961;&amp;#941;&amp;#960;&amp;#949;&amp;#964;&amp;#945;&amp;#953; &amp;#957;&amp;#945; &amp;#956;&amp;#949;&amp;#964;&amp;#945;&amp;#946;&amp;#940;&amp;#955;&amp;#949;&amp;#964;&amp;#949; &amp;#945;&amp;#965;&amp;#964;&amp;#942; &amp;#964;&amp;#951;&amp;#957; &amp;#945;&amp;#947;&amp;#947;&amp;#949;&amp;#955;&amp;#943;&amp;#945;.</target>
+			</trans-unit>
+			<trans-unit id="visible_until" xml:space="preserve" approved="yes">
+				<source>visible until: </source>
+				<target>&amp;#949;&amp;#956;&amp;#966;&amp;#940;&amp;#957;&amp;#953;&amp;#963;&amp;#951; &amp;#941;&amp;#969;&amp;#962;: </target>
+			</trans-unit>
+			<trans-unit id="maxchars_begin" xml:space="preserve" approved="yes">
+				<source>You have </source>
+				<target>&amp;#904;&amp;#967;&amp;#949;&amp;#964;&amp;#949; &amp;#945;&amp;#954;&amp;#972;&amp;#956;&amp;#945; </target>
+			</trans-unit>
+			<trans-unit id="maxchars_end" xml:space="preserve" approved="yes">
+				<source> characters left.</source>
+				<target> &amp;#967;&amp;#945;&amp;#961;&amp;#945;&amp;#954;&amp;#964;&amp;#942;&amp;#961;&amp;#949;&amp;#962; &amp;#965;&amp;#960;&amp;#972;&amp;#955;&amp;#959;&amp;#953;&amp;#960;&amp;#959;.</target>
+			</trans-unit>
+			<trans-unit id="phone_or_email_has_to_be_filled_out" xml:space="preserve" approved="yes">
+				<source>Please fill out phone or email.</source>
+				<target>&amp;#928;&amp;#945;&amp;#961;&amp;#945;&amp;#954;&amp;#945;&amp;#955;&amp;#974; &amp;#963;&amp;#965;&amp;#956;&amp;#960;&amp;#955;&amp;#951;&amp;#961;&amp;#974;&amp;#963;&amp;#964;&amp;#949; &amp;#964;&amp;#959; &amp;#964;&amp;#951;&amp;#955;&amp;#941;&amp;#966;&amp;#969;&amp;#957;&amp;#959; &amp;#942; &amp;#964;&amp;#959; email.</target>
+			</trans-unit>
+			<trans-unit id="email_address_not_valid" xml:space="preserve" approved="yes">
+				<source>The email address is not valid.</source>
+				<target>&amp;#919; &amp;#948;&amp;#953;&amp;#949;&amp;#973;&amp;#952;&amp;#965;&amp;#957;&amp;#963;&amp;#951; email &amp;#949;&amp;#943;&amp;#957;&amp;#945;&amp;#953; &amp;#940;&amp;#954;&amp;#965;&amp;#961;&amp;#951;.</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

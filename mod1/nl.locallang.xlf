@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" target-language="nl" datatype="plaintext" original="messages" date="2018-12-12T08:41:47Z" product-name="ke_smallads">
+		<header/>
+		<body>
+			<trans-unit id="title" xml:space="preserve" approved="yes">
+				<source>Smallads</source>
+				<target>Smallads</target>
+			</trans-unit>
+			<trans-unit id="exportReviewed" xml:space="preserve" approved="yes">
+				<source>Export reviewed</source>
+				<target>Export</target>
+			</trans-unit>
+			<trans-unit id="exportReviewedUserdata" xml:space="preserve" approved="yes">
+				<source>Export reviewed with Userdata</source>
+				<target>Export met Gebruikergegevens</target>
+			</trans-unit>
+			<trans-unit id="delete" xml:space="preserve" approved="yes">
+				<source>Delete</source>
+				<target>Verwijderen</target>
+			</trans-unit>
+			<trans-unit id="unHideReviewed" xml:space="preserve" approved="yes">
+				<source>Unhide</source>
+				<target>Zichtbaar maken</target>
+			</trans-unit>
+			<trans-unit id="explanation" xml:space="preserve" approved="yes">
+				<source>Here you can unhide all new Smallads or export Smallads. Please use the &quot;List&quot; module if you want to edit the smallads.</source>
+				<target>Hier kan je alle nieuwe kleine advertenties zichtbaar maken of exporteren.</target>
+			</trans-unit>
+			<trans-unit id="exportReviewed_explanation" xml:space="preserve" approved="yes">
+				<source>Here you can export all Smallads of the current page which have been reviewed, but which are not visible.</source>
+				<target>Hier kan je alle advertenties vinden van deze pagina welke beoordeeld zijn, maar niet zichtbaar.</target>
+			</trans-unit>
+			<trans-unit id="exportReviewedUserdata_title" xml:space="preserve" approved="yes">
+				<source>Export rev. Smallads with Userdata</source>
+				<target>Export advertenties met gebruikersgegevens</target>
+			</trans-unit>
+			<trans-unit id="exportReviewedUserdata_explanation" xml:space="preserve" approved="yes">
+				<source>Here you can find all Smallads of the current page which have been reviewed, but which are not visible, and the connected Userdata.</source>
+				<target>Hier kan je alle advertenties vinden van deze pagina welke beoordeeld zijn, maar niet zichtbaar en met de gebruikersgegevens.</target>
+			</trans-unit>
+			<trans-unit id="exportReviewed_title" xml:space="preserve" approved="yes">
+				<source>Export reviewed smallads</source>
+				<target>Exporteer beoordeelde advertenties</target>
+			</trans-unit>
+			<trans-unit id="phone" xml:space="preserve" approved="yes">
+				<source> Phone: </source>
+				<target> Telefoon: </target>
+			</trans-unit>
+			<trans-unit id="email" xml:space="preserve" approved="yes">
+				<source>email: </source>
+				<target>email: </target>
+			</trans-unit>
+			<trans-unit id="delete_explanation" xml:space="preserve" approved="yes">
+				<source>Here you can DELETE all the smallads which are NOT HIDDEN.</source>
+				<target>Hier kan je alle advertenties verwijderen die niet verborgen zijn.</target>
+			</trans-unit>
+			<trans-unit id="delete_title" xml:space="preserve" approved="yes">
+				<source>Delete unhidden Smallads</source>
+				<target>Verwijder niet verborgen advertenties</target>
+			</trans-unit>
+			<trans-unit id="unHideReviewed_explanation" xml:space="preserve" approved="yes">
+				<source>Here you can unhide all reviewed Smallads at once.</source>
+				<target>Hier kan je alle beoordeeld advertenties in een keer zichtbaar maken.</target>
+			</trans-unit>
+			<trans-unit id="unHideReviewed_title" xml:space="preserve" approved="yes">
+				<source>Unhide reviewed Smallads</source>
+				<target>Zichtbaar maken van beoordeelde advertenties</target>
+			</trans-unit>
+			<trans-unit id="appendToCommercialSmallads" xml:space="preserve" approved="yes">
+				<source></source>
+				<target></target>
+			</trans-unit>
+			<trans-unit id="appendToNonCommercialSmallads" xml:space="preserve" approved="yes">
+				<source></source>
+				<target></target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

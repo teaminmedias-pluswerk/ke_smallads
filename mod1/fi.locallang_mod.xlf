@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" target-language="fi" datatype="plaintext" original="messages" date="2018-12-12T08:41:52Z" product-name="ke_smallads">
+		<header/>
+		<body>
+			<trans-unit id="mlang_tabs_tab" xml:space="preserve" approved="yes">
+				<source>Smallads</source>
+				<target>Pienilmitukset</target>
+			</trans-unit>
+			<trans-unit id="mlang_labels_tabdescr" xml:space="preserve" approved="yes">
+				<source>Here you can unhide all new Smallads or export Smallads to a file.</source>
+				<target>Voit tämän modulin avulla piilottaa kaikki uudet pienilmoitukset tai viedä ne tiedostoksi.</target>
+			</trans-unit>
+			<trans-unit id="mlang_labels_tablabel" xml:space="preserve" approved="yes">
+				<source>Admin Smallads</source>
+				<target>Pienilmoitusten hallinta</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

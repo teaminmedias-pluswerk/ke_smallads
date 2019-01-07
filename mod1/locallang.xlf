@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2018-12-12T08:41:47Z" product-name="ke_smallads">
+		<header/>
+		<body>
+			<trans-unit id="title" xml:space="preserve">
+				<source>Smallads</source>
+			</trans-unit>
+			<trans-unit id="exportReviewed" xml:space="preserve">
+				<source>Export reviewed</source>
+			</trans-unit>
+			<trans-unit id="exportReviewedUserdata" xml:space="preserve">
+				<source>Export reviewed with Userdata</source>
+			</trans-unit>
+			<trans-unit id="delete" xml:space="preserve">
+				<source>Delete</source>
+			</trans-unit>
+			<trans-unit id="unHideReviewed" xml:space="preserve">
+				<source>Unhide</source>
+			</trans-unit>
+			<trans-unit id="explanation" xml:space="preserve">
+				<source>Here you can unhide all new Smallads or export Smallads. Please use the &quot;List&quot; module if you want to edit the smallads.</source>
+			</trans-unit>
+			<trans-unit id="exportAll" xml:space="preserve">
+				<source>Export Smallads with Userdata</source>
+			</trans-unit>
+			<trans-unit id="exportAll_explanation" xml:space="preserve">
+				<source>Here you can export all Smallads of the current page.</source>
+			</trans-unit>
+			<trans-unit id="exportAll_title" xml:space="preserve">
+				<source>Alle Kleinanzeigen löschen.</source>
+			</trans-unit>
+			<trans-unit id="exportReviewed_explanation" xml:space="preserve">
+				<source>Here you can export all Smallads of the current page which have been reviewed, but which are not visible.</source>
+			</trans-unit>
+			<trans-unit id="exportReviewedUserdata_title" xml:space="preserve">
+				<source>Export rev. Smallads with Userdata</source>
+			</trans-unit>
+			<trans-unit id="exportReviewedUserdata_explanation" xml:space="preserve">
+				<source>Here you can find all Smallads of the current page which have been reviewed, but which are not visible, and the connected Userdata.</source>
+			</trans-unit>
+			<trans-unit id="exportReviewed_title" xml:space="preserve">
+				<source>Export reviewed smallads</source>
+			</trans-unit>
+			<trans-unit id="phone" xml:space="preserve">
+				<source> Phone: </source>
+			</trans-unit>
+			<trans-unit id="email" xml:space="preserve">
+				<source>email: </source>
+			</trans-unit>
+			<trans-unit id="delete_explanation" xml:space="preserve">
+				<source>Here you can DELETE all the smallads which are NOT HIDDEN.</source>
+			</trans-unit>
+			<trans-unit id="delete_title" xml:space="preserve">
+				<source>Delete unhidden Smallads</source>
+			</trans-unit>
+			<trans-unit id="unHideReviewed_explanation" xml:space="preserve">
+				<source>Here you can unhide all reviewed Smallads at once.</source>
+			</trans-unit>
+			<trans-unit id="unHideReviewed_title" xml:space="preserve">
+				<source>Unhide reviewed Smallads</source>
+			</trans-unit>
+			<trans-unit id="appendToCommercialSmallads" xml:space="preserve">
+				<source></source>
+			</trans-unit>
+			<trans-unit id="appendToNonCommercialSmallads" xml:space="preserve">
+				<source></source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
